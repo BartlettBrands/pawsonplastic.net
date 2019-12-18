@@ -8,65 +8,116 @@
 <body>
 
 <header>
-    <h4 class="marquee fixed-top">Take a bite of of waste! Re-use? It’s in the bag!</h4>
-    <h4 class="marquee fixed-bottom">Take a bite of of waste! Re-use? It’s in the bag!</h4>
+    <h4 class="marquee fixed-top border-neon">
+        Take a bite of of waste! Re-use? It&rsquo;s in the bag!
+    </h4>
+    <h4 class="marquee fixed-bottom border-neon">
+        Take a bite of of waste! Re-use? It&rsquo;s in the bag!
+    </h4>
 </header>
 
 <main>
-    <section id="hero">
-        <h1><img src="img/POP-logo.png"></h1>
-        <video autobuffer autoloop loop disablePictureInPicture poster="img/video-poster.png" class="border-neon">
-            <source src="/media/video.oga">
-            <source src="/media/video.m4v">
-            <object type="video/ogg" data="/media/video.oga" width="320" height="240">
-                <param name="src" value="/media/video.oga">
-                <param name="autoplay" value="false">
-                <param name="autoStart" value="0">
-                <p><a href="/media/video.oga">Download this video file.</a></p>
-            </object>
-        </video>
-        <h3>Turning Trash into Bow Meow <span class="zest-lg animate-breathe rotate-left-15 bg-burst-yellow">Wow</span></h3>
-        <p>Introducing the first-ever Sleep System for Strays made from Amazon’s irresponisble shipping waste.</p>
+    <section id="hero" class="section section--hero">
+        <div class="grid grid--hero">
+            <h1 class="logo">
+                <img class="logo__img" src="img/POP-logo.png">
+                <span class="sr-only">
+                    Paws on Plastic! Sleep System For Strays
+                </span>
+            </h1>
+            <video autobuffer autoloop loop disablePictureInPicture poster="img/video-poster.png" class="border-neon">
+                <source src="/media/video.oga">
+                <source src="/media/video.m4v">
+                <object type="video/ogg" data="/media/video.oga" width="320" height="240">
+                    <param name="src" value="/media/video.oga">
+                    <param name="autoplay" value="false">
+                    <param name="autoStart" value="0">
+                    <p><a href="/media/video.oga">Download this video file.</a></p>
+                </object>
+            </video>
+        </div>
+        <h3 class="pull-up">Turning Trash into Bow Meow
+            <div class="animate-breathe rotate-left-sm burst burst--neon">
+                <span class="burst__words">Wow</span>
+            </div>
+        </h3>
+        <p class="constrain pull-up">
+            Introducing the first-ever Sleep System for Strays made from Amazon&rsquo;s irresponisble shipping waste.
+        </p>
+        <aside>
+            <div class="arrow rotate-left-md">
+            <img class="arrow__img" src="img/icon-arrow.png" alt="Arrow pointing downward">
+            <span>But Wait! There&rsquo;s More!</span>
+        </aside>
     </section>
-    <figure>
-        <img src="img/icon-arrow.png" alt="Arrow pointing downward">
-        <aside class="zest-sm rotate-left-30">But Wait! There’s More!</aside>
-    </figure>
 
     <section id="timmy">
-        <h3>Uh-OH! We’ve Got a Plastic Problem!</h3>
-        <p>Are you overwhelmed <img src="img/icon-overwhelmed.png" alt="Double exclaimation mark icon"> by excessive Amazon mailers&mdash;and just don’t know what to do with them? You can take them to “special” <img src="img/icon-special.png" alt="Star icon"> drop-off locations, but many won’t actually accept them. You can put them in your recycling bin, <img src="img/icon-wont.png" alt="Nope icon"> but they won’t be recycled!</p>
+        <h3>
+            Plastic Pollution is a Problem, Dog Dammit!
+        </h3>
+        <p>
+            Are you overwhelmed
+            <img class="icon" src="img/icon-overwhelmed.png" alt="Double exclaimation mark icon">
+            by excessive Amazon mailers&mdash;and just don&rsquo;t know what to do with them? You can take them to “special”
+            <img class="icon" src="img/icon-special.png" alt="Star icon">
+            drop-off locations, but many won&rsquo;t actually accept them. You can put them in your recycling bin,
+            <img class="icon" src="img/icon-wont.png" alt="Nope icon">
+            but they won&rsquo;t be recycled!
+        </p>
         <blockquote>
             <figure>
                 <img src="img/timmmmay.png" class="border-neon" alt="Headshot of Tim">
-                <figcaption><cite>Tim</cite>, Public Education Manager<br> Napa County Recycling & Waste Services</figcaption>
+                <figcaption>
+                    <cite>Tim</cite>,
+                    Public Education Manager<br>
+                    Napa County Recycling & Waste Services
+                </figcaption>
             </figure>
-            <p>“These bags can’t be processed at commercial recycling facilities and end up in the landfill taking hundreds of years to break down.”</p>
+            <p>“These bags can&rsquo;t be processed at commercial recycling facilities and end up in the landfill taking hundreds of years to break down.”</p>
         </blockquote>
     </section>
     <aside>
-        <h5 class="marquee rotate-left-15">Teach an old bag new tricks!</h5>
-        <h5 class="marquee rotate-right-15">Meow! Wow! Wow!</h5>
+        <h5 class="marquee rotate-left-sm">
+            Teach an old bag new tricks!
+        </h5>
+        <h5 class="marquee rotate-right-sm">
+            Meow! Wow! Wow!
+        </h5>
     </aside>
 
     <section id="doggy">
-        <h3>Press “Paws” on Shipping Waste!</h3>
-        <p>From bags to bitches, we’ve raised the woof on re-use by designing a revolutionary Sleep System for Strays made entirely of used Amazon Mailers.</p>
-        <img src="img/happy-earth.png" alt="Happy Face Globe!">
-        <aside class="zest-sm animate-teeter rotate-left-15 bg-burst-orange">Turn  Plastic  Waste into beds!</aside>
+        <h3>
+            Press “Paws” on Shipping Waste!
+        </h3>
+        <p>
+            From bags to bitches, we&rsquo;ve raised the woof on re-use by designing a revolutionary
+            Sleep System for Strays made entirely of used Amazon Mailers.
+        </p>
+        <img class="img-happy-earth" src="img/icon-happy-earth.png" alt="Happy Face Globe!">
+        <aside class="fs-sm animate-teeter rotate-left-sm burst burst--orange">
+            <span class="burst__words">
+                Turn  Plastic  Waste into beds!
+            </span>
+        </aside>
         <img src="img/puppy-in-bed-probably-purchased-on-amazon.png" alt="Cute sad doggy on a tiny pillow bed">
-        <aside class="zest-sm animate-teeter rotate-right-15 bg-burst-orange">Feel Good by Doing Good!</aside>
+        <aside class="fs-sm animate-teeter rotate-right-sm burst burst--orange">
+            <span class="burst__words">
+                Feel Good by Doing Good!
+            </span>
+        </aside>
     </section>
 
     <section id="donate">
         <h3>Give Every Stray Its Prime Day!</h3>
-        <p>We’ll take your Amazon Plastic Bubble Mailers and give them a second life.</p>
-        <button type="button">Donate Now!</button>
+        <p>We&rsquo;ll take your Amazon Plastic Bubble Mailers and give them a second life.</p>
+        <button type="button">
+            Donate Now!
+        </button>
     </section>
     <aside>
-        <h3 class="marquee no-box-style">They Can’t Get Enough!</h3>
+        <h3 class="marquee">They Can&rsquo;t Get Enough!</h3>
         <blockquote>
-            <p>“Re-use? It’s in the bag!”</p>
+            <p>“Re-use? It&rsquo;s in the bag!”</p>
             <cite>Amazon Addict</cite>
         </blockquote>
         <blockquote>
@@ -89,19 +140,19 @@
             <figcaption>From ending up here</figcaption>
             <img src="img/amazon-bag-in-da-traaaash.png" class="border-neon" alt="Amazon mailer bag">
         </figure>
-        <p>Instead, give a stray a luxurious lounging experience that’s the cat’s meow and the dog’s bow wow!</p>
+        <p>Instead, give a stray a luxurious lounging experience that&rsquo;s the cat&rsquo;s meow and the dog&rsquo;s bow wow!</p>
         <figure>
-            <img src="img/scardy-kitten.png" class="animate-teeter" alt="A cat’s head">
+            <img src="img/scardy-kitten.png" class="animate-teeter" alt="A cat&rsquo;s head">
             <figcaption>
-                <aside class="zest-md animate-teeter rotate-left-15">Meow</aside>
-                <aside class="zest-md animate-teeter rotate-right-15">Meow</aside>
+                <aside class="fs-md animate-teeter rotate-left-sm">Meow</aside>
+                <aside class="fs-md animate-teeter rotate-right-sm">Meow</aside>
             </figcaption>
         </figure>
         <figure>
-            <img src="img/peaches-the-dog.png" class="animate-teeter" alt="A dog’s head — not just any dog, Peaches the Dog">
+            <img src="img/peaches-the-dog.png" class="animate-teeter" alt="A dog&rsquo;s head — not just any dog, Peaches the Dog">
             <figcaption>
-                <aside class="zest-md animate-teeter rotate-left-15">Meow</aside>
-                <aside class="zest-md animate-teeter rotate-right-15">Meow</aside>
+                <aside class="fs-md animate-teeter rotate-left-sm">Meow</aside>
+                <aside class="fs-md animate-teeter rotate-right-sm">Meow</aside>
             </figcaption>
         </figure>
     </section>
@@ -109,9 +160,9 @@
 
 <footer>
     <h2>Save Animals And the Planet. Donate Bags Today!</h2>
-    <aside class="zest-sm animate-teeter rotate-left-30 bg-burst-outline">We want your bags!</aside>
+    <aside class="fs-sm animate-teeter rotate-left-md burst burst--outline">We want your bags!</aside>
     <h3>Send or Drop Off Your Plastic Amazon Mailer:</h3>
-    <aside class="zest-sm animate-teeter rotate-right-30 bg-burst-outline">Send  them  to us!</aside>
+    <aside class="fs-sm animate-teeter rotate-right-md burst burst--outline">Send  them  to us!</aside>
     <address>
         Bartlett Brands<br>
         977 Valencia Street<br>
