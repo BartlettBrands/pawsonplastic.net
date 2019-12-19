@@ -67,8 +67,12 @@ h5 {
 }
 /* calphalon */
 h6 {
-    font-size: 20px;
+    font-size: var(--fs-sm);;
     line-height: var(--lh2);
+}
+
+p {
+    margin: 25px auto;
 }
 
 .fs-sm {
@@ -76,27 +80,27 @@ h6 {
     line-height: var(--lh2);
 }
 .fs-md {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
     line-height: var(--lh2);
 }
 
-button {
-    border-radius: 30px;
-    padding: 1em 4em;
-    border: var(--border);
-    box-shadow: -10px 0 0 0 var(--c-red), 0 10px 0 0 var(--c-red), -10px 10px 0 0 var(--c-red);
-    position: relative;
-    left: 0;
-    top: 0;
-    background-color: var(--c-orange);
-    outline: none;
-    font-size: 38px;
-}
-button:active {
-    box-shadow: 10px 0 0 0 var(--c-red), 0 -10px 0 0 var(--c-red), 10px -10px 0 0 var(--c-red);
-    left: -10px;
-    top: 10px
-}
+// button {
+//     border-radius: 30px;
+//     padding: 1em 4em;
+//     border: var(--border);
+//     box-shadow: -10px 0 0 0 var(--c-red), 0 10px 0 0 var(--c-red), -10px 10px 0 0 var(--c-red);
+//     position: relative;
+//     left: 0;
+//     top: 0;
+//     background-color: var(--c-orange);
+//     outline: none;
+//     font-size: 38px;
+// }
+// button:active {
+//     box-shadow: 10px 0 0 0 var(--c-red), 0 -10px 0 0 var(--c-red), 10px -10px 0 0 var(--c-red);
+//     left: -10px;
+//     top: 10px
+// }
 
 
 /* structure */
@@ -104,7 +108,8 @@ button:active {
 header,
 footer,
 section {
-    margin: 50px;
+    margin: 50px 0;
+    padding: 0 50px;
 }
 
 
@@ -152,6 +157,9 @@ section {
 
 .fixed-top,
 .fixed-bottom {
+    display: grid;
+    align-content: center;
+    height: 50px;
     position: fixed;
     left: 0;
     background: var(--c-blue);
@@ -170,23 +178,31 @@ section {
 .grid {
     display: grid;
     align-items: center;
-    justify-content: middle;
-    grid-column-gap: 50px;
+    justify-content: center;
+    // grid-column-gap: 50px;
+    grid-template-columns: min-content auto;
 }
-.grid--hero {
-    grid-template-columns: max-content auto;
+.grid-3x {
+    grid-template-columns: auto auto auto;
 }
 
-.constrain {
+.constrain-sm,
+.constrain-md {
+    margin-left: auto;
+    margin-right: auto;
+}
+.constrain-sm {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+}
+.constrain-md {
+    width: 85%;
+    max-width: 1000px;
 }
 
 .pull-up {
     margin-top: -25px;
 }
-
 
 
 /* CONTENT ----------------------------------------*/
@@ -229,24 +245,116 @@ section {
     margin: 0 30px;
 }
 
-/* other iamges */
+/* other images */
 .icon {
     display: inline-block;
     height: var(--lh1);
     vertical-align: text-bottom;
 }
 
-.arrow {
-    display: inline;
-    text-align: left;
+.happy-earth {
+    height: 129px;
+    width: auto;
+}
 
+.arrow {
+    text-align: left;
 }
 .arrow__img {
     height: auto;
     width: 113px;
+    display: block;
+}
+.arrow__text {
+    color: var(--c-orange);
+    margin-top: 25px;
+    text-align: center;
+    display: inline-block;
 }
 
-.img-happy-earth {
-    height: 129px;
-    width: auto;
+.tim {
+    color: var(--c-blue);
+    border: var(--border);
+    background: var(--c-neon);
+}
+.tim__img {
+    width: 592px;
+    height: auto;
+}
+.tim__caption {
+    text-align: left;
+}
+.tim__quote {
+    background: transparent no-repeat center/contain url('img/speach-bubble.png');
+    width: 498px;
+    height: 366px;
+    position: relative;
+    left: -125px;
+    display: grid;
+    align-content: center;
+    padding: 50px;
+}
+
+.ribbon-section {
+    margin: 150px 0 200px;
+}
+.ribbon {
+    display: grid;
+    align-content: center;
+    border: var(--border);
+    height: 75px;
+    width: 150%;
+    margin-left: -25%;
+    position: absolute;
+}
+.ribbon--neon {
+    transform: rotate(1.5deg);
+    color: var(--c-blue);
+    background: var(--c-neon);
+}
+.ribbon--blue {
+    position: relative;
+    z-index: 1;
+    transform: rotate(-9deg);
+    color: var(--c-orange);
+    background: var(--c-blue);
+}
+
+.doggy,
+.doggy__img {
+    width: 876px;
+    margin: 0 auto;
+}
+.doggy {
+    position: relative;
+}
+.doggy__img {
+    height: auto;
+}
+.doggy__happy-earth,
+.doggy__burst1,
+.doggy__burst2 {
+    position: absolute;
+}
+.doggy__happy-earth {
+    right: 0;
+    top: 0;
+    width: 129px;
+    height: auto;
+}
+.doggy__burst1 {
+    left: 5%;
+    top: 15%;
+}
+.doggy__burst2 {
+    right: 10%;
+    bottom: 15%;
+}
+
+.quips__title {
+    line-height: 0.8em;
+}
+.quips__quote {
+    margin-right: 50px;
+    margin-left: 50px;
 }

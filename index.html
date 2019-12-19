@@ -18,7 +18,7 @@
 
 <main>
     <section id="hero" class="section section--hero">
-        <div class="grid grid--hero">
+        <div class="grid">
             <h1 class="logo">
                 <img class="logo__img" src="img/POP-logo.png">
                 <span class="sr-only">
@@ -44,10 +44,12 @@
         <p class="constrain pull-up">
             Introducing the first-ever Sleep System for Strays made from Amazon&rsquo;s irresponisble shipping waste.
         </p>
-        <aside>
-            <div class="arrow rotate-left-md">
+        <aside class="arrow">
             <img class="arrow__img" src="img/icon-arrow.png" alt="Arrow pointing downward">
-            <span>But Wait! There&rsquo;s More!</span>
+            <h6 class="arrow__text fs-sm rotate-left-md">
+                But Wait!<br>
+                There&rsquo;s More!
+            </h6>
         </aside>
     </section>
 
@@ -58,77 +60,79 @@
         <p>
             Are you overwhelmed
             <img class="icon" src="img/icon-overwhelmed.png" alt="Double exclaimation mark icon">
-            by excessive Amazon mailers&mdash;and just don&rsquo;t know what to do with them? You can take them to “special”
+            by excessive Amazon mailers&mdash;and just don&rsquo;t know what to do with them? You can take them to &ldquo;special&rdquo;
             <img class="icon" src="img/icon-special.png" alt="Star icon">
-            drop-off locations, but many won&rsquo;t actually accept them. You can put them in your recycling bin,
+            drop-off locations, but many won&rsquo;t actually accept them.<br>
+            You can put them in your recycling bin,
             <img class="icon" src="img/icon-wont.png" alt="Nope icon">
             but they won&rsquo;t be recycled!
         </p>
-        <blockquote>
-            <figure>
-                <img src="img/timmmmay.png" class="border-neon" alt="Headshot of Tim">
-                <figcaption>
+        <blockquote class="grid">
+            <figure class="tim">
+                <img class="tim__img" src="img/timmmmay.png" alt="Headshot of Tim">
+                <figcaption class="tim__caption fs-sm">
                     <cite>Tim</cite>,
                     Public Education Manager<br>
                     Napa County Recycling & Waste Services
                 </figcaption>
             </figure>
-            <p>“These bags can&rsquo;t be processed at commercial recycling facilities and end up in the landfill taking hundreds of years to break down.”</p>
+            <p class="tim__quote fs-md">
+                &ldquo;These bags can&rsquo;t be processed at commercial recycling facilities and end up in the landfill taking hundreds of years to break down.&rdquo;
+            </p>
         </blockquote>
     </section>
-    <aside>
-        <h5 class="marquee rotate-left-sm">
-            Teach an old bag new tricks!
-        </h5>
-        <h5 class="marquee rotate-right-sm">
+
+    <section id="ribbons" class="ribbon-section">
+        <h5 class="ribbon ribbon--neon marquee">
             Meow! Wow! Wow!
         </h5>
-    </aside>
+        <h5 class="ribbon ribbon--blue marquee">
+            Meow! Wow! Bow!
+        </h5>
+    </section>
 
     <section id="doggy">
         <h3>
-            Press “Paws” on Shipping Waste!
+            Press &ldquo;Paws&rdquo; on Shipping Waste!
         </h3>
-        <p>
+        <p class="constrain-md">
             From bags to bitches, we&rsquo;ve raised the woof on re-use by designing a revolutionary
             Sleep System for Strays made entirely of used Amazon Mailers.
         </p>
-        <img class="img-happy-earth" src="img/icon-happy-earth.png" alt="Happy Face Globe!">
-        <aside class="fs-sm animate-teeter rotate-left-sm burst burst--orange">
-            <span class="burst__words">
-                Turn  Plastic  Waste into beds!
-            </span>
-        </aside>
-        <img src="img/puppy-in-bed-probably-purchased-on-amazon.png" alt="Cute sad doggy on a tiny pillow bed">
-        <aside class="fs-sm animate-teeter rotate-right-sm burst burst--orange">
-            <span class="burst__words">
-                Feel Good by Doing Good!
-            </span>
-        </aside>
+        <figure class="doggy">
+            <img class="doggy__img" src="img/puppy-in-bed-probably-purchased-on-amazon.png" alt="Cute sad doggy on a tiny pillow bed">
+            <img class="doggy__happy-earth" src="img/icon-happy-earth.png" alt="Happy Face Globe!">
+            <aside class="doggy__burst1 animate-teeter rotate-left-sm burst burst--orange">
+                <h6 class="burst__words">
+                    Turn  Plastic  Waste into beds!
+                </h6>
+            </aside>
+            <aside class="doggy__burst2 animate-teeter rotate-right-sm burst burst--orange">
+                <h6 class="burst__words">
+                    Feel Good by Doing Good!
+                </h6>
+            </aside>
+        </figure>
+        <h3>Give Every Stray Its Prime Day!</h3>
     </section>
 
-    <section id="donate">
-        <h3>Give Every Stray Its Prime Day!</h3>
-        <p>We&rsquo;ll take your Amazon Plastic Bubble Mailers and give them a second life.</p>
-        <button type="button">
-            Donate Now!
-        </button>
+    <section id="quips" class="bg-neon color-blue">
+        <h3 class="quips__title marquee">They Can&rsquo;t Get Enough!</h3>
+        <div class="grid grid-3x">
+            <blockquote class="quips__quote">
+                <p>&ldquo;Re-use? It&rsquo;s in the bag!&rdquo;</p>
+                <cite class="quips__cite">Amazon Addict</cite>
+            </blockquote>
+            <blockquote class="quips__quote">
+                <p>&ldquo;A must for mutts!&rdquo;</p>
+                <cite class="quips__cite">Animal Shelter Owner</cite>
+            </blockquote>
+            <blockquote class="quips__quote">
+                <p>&ldquo;Yip yip hooray!&rdquo;</p>
+                <cite class="quips__cite">Stray Dog</cite>
+            </blockquote>
+        </div>
     </section>
-    <aside>
-        <h3 class="marquee">They Can&rsquo;t Get Enough!</h3>
-        <blockquote>
-            <p>“Re-use? It&rsquo;s in the bag!”</p>
-            <cite>Amazon Addict</cite>
-        </blockquote>
-        <blockquote>
-            <p>“A must for mutts!”</p>
-            <cite>Animal Shelter Owner</cite>
-        </blockquote>
-        <blockquote>
-            <p>“Yip yip hooray!”</p>
-            <cite>Stray Dog</cite>
-        </blockquote>
-    </aside>
 
     <section id="landfill">
         <h3>Take a Bite Out of Landfill Waste!</h3>
