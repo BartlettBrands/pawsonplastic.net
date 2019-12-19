@@ -41,20 +41,24 @@ p {
 
 big {
     1.4em;
+    line-height: var(--lh1);
 }
 
 blockquote {
     font-size: 26px;
+    line-height: var(--lh1);
 }
 
 figcaption {
     font-size: 19px;
+    line-height: var(--lh1);
 }
 
 cite {
     font-family: var(--f-extended);
     font-weight: 500;
     font-size: 16px;
+    line-height: var(--lh1);
     font-style: normal;
 }
 
@@ -80,6 +84,7 @@ h2 {
 }
 h2 big {
     font-size: 1.1em;
+    line-height: var(--lh2);
     font-weight: 900;
 }
 h3 {
@@ -87,6 +92,7 @@ h3 {
 }
 h4 {
     font-size: 28px;
+    margin-top: 50px;
 }
 h5 {
     font-size: 20px;
@@ -102,6 +108,7 @@ aside {
 aside > big {
     font-family: var(--f-extended);
     font-weight: 900;
+    line-height: var(--lh2);
 }
 
 
@@ -215,12 +222,47 @@ ul, ol, li {
 }
 
 
-/* CONTENT ----------------------------------------*/
-.logo {}
-.logo__img {
-    width: 437px;
+/* IMAGE SIZING ----------------------------------------*/
+img {
     height: auto;
 }
+.icon {
+    display: inline-block;
+    height: var(--lh1);
+    vertical-align: text-bottom;
+}
+.img-logo {
+    width: 437px;
+}
+.img-arrow {
+    width: 113px;
+}
+.img-tim {
+    width: 592px;
+}
+.img-doggy-on-bed {
+    width: 876px;
+}
+.img-earth {
+    width: 129px;
+}
+.img-bag-clean,
+.img-bag-trash {
+    width: 568px;
+}
+.img-cathead {
+    width: 185px;
+}
+.img-doghead {
+    width: 268px;
+}
+.img-insta-download {
+    width: 954px;
+}
+
+
+
+/* CONTENT ----------------------------------------*/
 
 /* burst items */
 .burst {
@@ -255,24 +297,10 @@ ul, ol, li {
     margin: 0 30px;
 }
 
-/* other images */
-.icon {
-    display: inline-block;
-    height: var(--lh1);
-    vertical-align: text-bottom;
-}
-
-.happy-earth {
-    height: 129px;
-    width: auto;
-}
-
 .arrow {
     text-align: left;
 }
 .arrow__img {
-    height: auto;
-    width: 113px;
     display: block;
 }
 .arrow__text {
@@ -287,12 +315,9 @@ ul, ol, li {
     border: var(--border);
     background: var(--c-neon);
 }
-.tim__img {
-    width: 592px;
-    height: auto;
-}
 .tim__caption {
     text-align: left;
+    margin: 5px 10px 10px;
 }
 .tim__quote {
     background: transparent no-repeat center/contain url('img/speach-bubble.png');
@@ -330,16 +355,10 @@ ul, ol, li {
     background: var(--c-blue);
 }
 
-.doggy,
-.doggy__img {
-    width: 876px;
-    margin: 0 auto;
-}
 .doggy {
+    display: inline-block;
+    margin: 0 auto;
     position: relative;
-}
-.doggy__img {
-    height: auto;
 }
 .doggy__happy-earth,
 .doggy__burst1,
@@ -349,7 +368,6 @@ ul, ol, li {
 .doggy__happy-earth {
     right: 0;
     top: 0;
-    width: 129px;
     height: auto;
 }
 .doggy__burst1 {
@@ -361,6 +379,10 @@ ul, ol, li {
     bottom: 15%;
 }
 
+.quips-section {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
 .quips__title {
     line-height: 0.8em;
 }
@@ -371,21 +393,11 @@ ul, ol, li {
 .quips__quote {
     margin-bottom: 5px;
 }
-
-.bag__img {
-    width: 568px;
-    height: auto;
-    border: var(--border);
+.quips__cite {
+    display: block;
+    margin-bottom: 25px;
 }
 
-.animalhead__cat {
-    width: 185px;
-    height: auto;
-}
-.animalhead__dog {
-    width: 268px;
-    height: auto;
-}
 .animalhead__sound {
     display: block;
     margin: 25px 0;
