@@ -36,7 +36,8 @@ html, body {
 /* TEXT ----------------------------------------- */
 
 p {
-    margin: 25px auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 big {
@@ -62,8 +63,14 @@ cite {
     font-style: normal;
 }
 
+address {
+    font-style: normal;
+    margin-top: -25px;
+}
+
 body > footer {
     font-size: 20px;
+    line-height: var(--lh1);
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
@@ -96,6 +103,7 @@ h4 {
 }
 h5 {
     font-size: 20px;
+    margin-top: 25px;
 }
 h6 {
     font-size: 24px;
@@ -125,6 +133,7 @@ section {
 ul, ol, li {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -152,6 +161,14 @@ ul, ol, li {
 }
 .rotate-right-md {
     transform: rotate(12deg);
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
 }
 
 .sr-only {
@@ -193,14 +210,15 @@ ul, ol, li {
     justify-content: center;
     grid-template-columns: min-content auto;
 }
-.grid--has-gaps {
-    grid-column-gap: 50px;
-}
 .grid--3x {
     grid-template-columns: auto auto auto;
 }
 .grid--4x {
     grid-template-columns: auto auto auto auto;
+}
+.grid--has-gaps {
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 }
 
 .constrain-sm,
@@ -225,6 +243,7 @@ ul, ol, li {
 /* IMAGE SIZING ----------------------------------------*/
 img {
     height: auto;
+    max-width: 100%;
 }
 .icon {
     display: inline-block;
@@ -233,6 +252,9 @@ img {
 }
 .img-logo {
     width: 437px;
+}
+.img-POP-icon {
+    width: 216px;
 }
 .img-arrow {
     width: 113px;
@@ -256,8 +278,8 @@ img {
 .img-doghead {
     width: 268px;
 }
-.img-insta-download {
-    width: 954px;
+.img-insta {
+    width: 540px;
 }
 
 
@@ -401,4 +423,63 @@ img {
 .animalhead__sound {
     display: block;
     margin: 25px 0;
+}
+
+.shame__grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "title-dl      title-copy"
+        "insta-graphic insta-text";
+    align-items: stretch;
+    margin-bottom: 25px;
+}
+.shame__title-dl {
+    grid-area: title-dl;
+}
+.shame__title-copy {
+    grid-area: title-copy;
+}
+.shame__insta-graphic,
+.shame__insta-text {
+    margin: -25px 0 0;
+}
+.shame__insta-graphic {
+    grid-area: insta-graphic;
+}
+.shame__insta-text {
+    grid-area: insta-text;
+    padding: 25px;
+}
+
+.donate {
+    position: relative;
+    margin: 0 auto 75px;
+    padding: 50px 0;
+}
+.donate__burst1,
+.donate__burst2 {
+    position: absolute;
+    padding: 0 25px;
+}
+.donate__burst1 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.donate__burst2 {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.footer__grid {
+    grid-template-columns: auto max-content auto;
+    align-items: flex-end;
+    justify-content: stretch;
+    margin-top: 125px;
+}
+.footer__img {
+    display: block;
+    margin-bottom: 25px;
 }
