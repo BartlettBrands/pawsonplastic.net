@@ -9,48 +9,39 @@
 
 <header>
     <aside class="marquee marquee--fixed-top">
-        <big class="marquee__fixed-animation marquee__fixed-animation--1">
+        <strong class="marquee__fixed-animation marquee__fixed-animation--1">
             Take a bite of of waste! Re-use? It&rsquo;s in the bag!&nbsp;
-        </big>
-        <big class="marquee__fixed-animation marquee__fixed-animation--2">
+        </strong>
+        <strong class="marquee__fixed-animation marquee__fixed-animation--2">
             Take a bite of of waste! Re-use? It&rsquo;s in the bag!&nbsp;
-        </big>
-        <big class="marquee__fixed-animation marquee__fixed-animation--3">
+        </strong>
+        <strong class="marquee__fixed-animation marquee__fixed-animation--3">
             Take a bite of of waste! Re-use? It&rsquo;s in the bag!&nbsp;
-        </big>
+        </strong>
     </aside>
     <aside class="marquee marquee--fixed-bottom">
-        <big class="marquee__fixed-animation marquee__fixed-animation--1">
+        <strong class="marquee__fixed-animation marquee__fixed-animation--1">
             Take a bite of of waste! Re-use? It&rsquo;s in the bag!&nbsp;
-        </big>
-        <big class="marquee__fixed-animation marquee__fixed-animation--2">
+        </strong>
+        <strong class="marquee__fixed-animation marquee__fixed-animation--2">
             Take a bite of of waste! Re-use? It&rsquo;s in the bag!&nbsp;
-        </big>
-        <big class="marquee__fixed-animation marquee__fixed-animation--3">
+        </strong>
+        <strong class="marquee__fixed-animation marquee__fixed-animation--3">
             Take a bite of of waste! Re-use? It&rsquo;s in the bag!&nbsp;
-        </big>
+        </strong>
     </aside>
 </header>
 
 <main>
-    <section id="hero" class="section section--hero">
-        <div class="grid">
+    <section id="hero" class="hero-section">
+        <div class="grid grid--has-gaps">
             <h1>
                 <img class="img-logo" src="img/POP-logo.png">
                 <span class="sr-only">
                     Paws on Plastic! Sleep System For Strays
                 </span>
             </h1>
-            <video autobuffer autoloop loop disablePictureInPicture poster="img/video-poster.png" class="border-neon">
-                <!--source src="/media/video.oga">
-                <source src="/media/video.m4v">
-                <object type="video/ogg" data="/media/video.oga" width="320" height="240">
-                    <param name="src" value="/media/video.oga">
-                    <param name="autoplay" value="false">
-                    <param name="autoStart" value="0">
-                    <p><a href="/media/video.oga">Download this video file.</a></p>
-                </object-->
-            </video>
+            <iframe src="https://player.vimeo.com/video/3711680" class="bordered" width="640" height="427" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
         <h2 class="pull-up">
             Turning Trash into Bow Meow
@@ -62,7 +53,7 @@
             Introducing the first-ever Sleep System for Strays made from
             Amazon&rsquo;s irresponisble shipping waste.
         </p>
-        <aside class="arrow">
+        <aside class="arrow yank-up">
             <img class="img-arrow arrow__img" src="img/icon-arrow.png" alt="Arrow pointing downward">
             <span class="arrow__text rotate-left-md">
                 But Wait!<br>
@@ -151,7 +142,7 @@
         <h2>Give Every Stray Its Prime Day!</h2>
     </section>
 
-    <section id="quips" class="quips-section bg-neon color-blue">
+    <section id="quips" class="quips-section">
         <h2 class="marquee marquee--quips-title">
             <div class="marquee__quips-animation marquee__quips-animation--1">
                 They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough!&nbsp;
@@ -163,7 +154,7 @@
                 They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough! They Can&rsquo;t Get Enough!&nbsp;
             </div>
         </h2>
-        <ul class="grid grid--3x">
+        <ul class="grid quips__grid">
             <li class="quips__group">
                 <p class="quips__quote">&ldquo;Re-use? It&rsquo;s in the bag!&rdquo;</p>
                 <cite class="quips__cite">Amazon Addict</cite>
@@ -181,27 +172,27 @@
 
     <section id="landfill">
         <h2>Take a Bite Out of Landfill Waste!</h2>
-        <ul class="grid grid--has-gaps bags">
+        <ul class="grid grid--has-gaps bags__grid">
             <li>
                 <p>Prevent this bag</p>
-                <img class="img-bag-clean border-neon" src="img/amazon-bag-looks-so-clean.png" alt="Amazon mailer bag">
+                <img class="img-bag-clean bordered" src="img/amazon-bag-looks-so-clean.png" alt="Amazon mailer bag">
             </li>
             <li>
                 <p>From ending up here</p>
-                <img class="img-bag-trash border-neon" src="img/amazon-bag-in-da-traaaash.png" alt="Amazon mailer bag">
+                <img class="img-bag-trash bordered" src="img/amazon-bag-in-da-traaaash.png" alt="Amazon mailer bag">
             </li>
         </ul>
         <p class="constrain-md">
             Instead, give a stray a luxurious lounging experience
             that&rsquo;s the cat&rsquo;s meow and the dog&rsquo;s bow wow!
         </p>
-        <div class="grid grid--4x">
+        <div class="grid animalhead__grid">
             <aside>
                 <big class="animate-teeter-right animalhead__sound">
-                    Meow
+                    Meow!
                 </big>
                 <big class="animate-teeter-left animalhead__sound">
-                    Meow
+                    Meow!
                 </big>
             </aside>
             <figure>
@@ -212,10 +203,10 @@
             </figure>
             <aside>
                 <big class="animate-teeter-left animalhead__sound">
-                    Bow
+                    Bow!
                 </big>
                 <big class="animate-teeter-right animalhead__sound">
-                    Wow
+                    Wow!
                 </big>
             </aside>
         </div>
@@ -237,7 +228,7 @@
                     <h5 class="shame__title-dl">Download This!</h5>
                     <img class="shame__insta-graphic img-insta" src="img/insta-post-pause-mailer-mania.png" alt="Press Pause on Mailer Mania graphic">
                     <h5 class="shame__title-copy">Copy That!</h5>
-                    <p class="shame__insta-text bg-neon color-orange">
+                    <p class="shame__insta-text">
                         Dear Amazon, Copy TBD. Wating on Des for short caption.
                     </p>
                 </ul>
@@ -267,19 +258,23 @@
 <footer id="footer">
     <h3>
         Save Animals And the Planet.<br>
-        @bartlettbrands
+        <a href="https://www.instagram.com/bartlettbrands/">@bartlettbrands</a>
     </h3>
     <div class="footer__grid grid">
         <p class="align-left">
-            <a href="">A Sustainable Sister <br>
-            of Bartlett Brands</a>
+            <a href="http://bartlettbrands.com/">
+                A Sustainable Sister <br>
+                of Bartlett Brands
+            </a>
         </p>
         <img class="footer__img img-POP-icon" src="img/POP-icon.png" alt="Paws on Plastic Pawprint Logo: POP! Helping Strays Slumber Since 2019">
         <p class="align-right">
-            <a href="">Special thanks to<br>
-            Product Designer<br>
-            Joel Bordayo<br>
-            for being a star</a>
+            <a href="https://www.linkedin.com/in/joel-bordayo-2019/">
+                Special thanks to<br>
+                Product Designer<br>
+                Joel Bordayo<br>
+                for being a star
+            </a>
         </p>
     </div>
 </footer>
