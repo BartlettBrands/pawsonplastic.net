@@ -33,7 +33,9 @@ html, body {
 }
 
 
-/* TEXT ----------------------------------------- */
+
+
+/* TEXT ----------------------------------------*/
 
 p {
     margin-top: 25px;
@@ -41,7 +43,7 @@ p {
 }
 
 big {
-    1.4em;
+    font-size: 1.4em;
     line-height: var(--lh1);
 }
 
@@ -84,7 +86,7 @@ h1, h2, h3, h4, h5, h6, aside {
 }
 
 h1 {
-    // surrounds logo; ignored
+    /* surrounds logo; ignored */
 }
 h2 {
     font-size: 34px;
@@ -116,12 +118,12 @@ aside {
 aside > big {
     font-family: var(--f-extended);
     font-weight: 900;
-    line-height: var(--lh2);
+    line-height: 50px;
 }
 
 
 
-/* structure */
+/* STRUCTURE ----------------------------------------*/
 
 header,
 footer,
@@ -179,31 +181,6 @@ ul, ol, li {
     pointer-events: none;
 }
 
-
-/* POSITIONING & LAYOUT ----------------------------------------*/
-
-.marquee {
-    display: grid;
-    align-content: center;
-}
-.marquee--fixed-top,
-.marquee--fixed-bottom {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    height: 50px;
-    background: var(--c-blue);
-}
-.marquee--fixed-top {
-    top: 0;
-    border-bottom: var(--border);
-}
-.marquee--fixed-bottom {
-    top: calc(100% - 50px);
-    border-top: var(--border);
-}
-
 .grid {
     display: grid;
     align-items: center;
@@ -240,7 +217,190 @@ ul, ol, li {
 }
 
 
+
+
+/* ANIMATIONS ----------------------------------------*/
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.marquee {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
+.marquee--fixed-top,
+.marquee--fixed-bottom {
+    position: fixed;
+    z-index: 10;
+    height: 50px;
+    background: var(--c-blue);
+}
+.marquee--fixed-top {
+    top: 0;
+    border-bottom: var(--border);
+}
+.marquee--fixed-bottom {
+    bottom: 0;
+    border-top: var(--border);
+}
+.marquee__fixed-animation {
+    position: absolute;
+    animation: marquee 18s linear infinite;
+    left: 100%;
+    line-height: 50px;
+}
+.marquee__fixed-animation--1 {
+    animation-delay: 0;
+}
+.marquee__fixed-animation--2 {
+    animation-delay: 6s;
+}
+.marquee__fixed-animation--3 {
+    animation-delay: 12s;
+}
+
+.marquee--ribbon {
+    border: var(--border);
+    height: 75px;
+    width: 150%;
+    left: -25%;
+}
+.marquee--ribbon--neon {
+    z-index: 1;
+    transform: rotate(1.5deg);
+    color: var(--c-blue);
+    background: var(--c-neon);
+}
+.marquee--ribbon--blue {
+    z-index: 2;
+    transform: rotate(-9deg);
+    color: var(--c-orange);
+    background: var(--c-blue);
+}
+.marquee__ribbon-animation {
+    position: absolute;
+    animation: marquee 30s linear infinite;
+    left: 100%;
+    line-height: 75px;
+}
+.marquee__ribbon-animation--1 {
+    animation-delay: 0;
+}
+.marquee__ribbon-animation--2 {
+    animation-delay: 10s;
+}
+.marquee__ribbon-animation--3 {
+    animation-delay: 20s;
+}
+
+.marquee--quips-title {
+    z-index: 1;
+    line-height: 0.8em;
+    height: 1em;
+}
+.marquee__quips-animation {
+    position: absolute;
+    animation: marquee 24s linear infinite;
+    left: 100%;
+}
+.marquee__quips-animation--1 {
+    animation-delay: 0;
+}
+.marquee__quips-animation--2 {
+    animation-delay: 8s;
+}
+.marquee__quips-animation--3 {
+    animation-delay: 16s;
+}
+
+
+@keyframes wow {
+    0% {
+        transform: scale(1) rotate(-7deg);
+    }
+    50% {
+        transform: scale(1.25) rotate(7deg);
+    }
+    100% {
+        transform: scale(1) rotate(-7deg);
+    }
+}
+
+
+.animate-wow {
+    animation: wow 1.5s linear infinite;
+}
+
+
+@keyframes teeter {
+    0% {
+        transform: rotate(-7deg);
+    }
+    50% {
+        transform: rotate(7deg);
+    }
+    100% {
+        transform:  rotate(-7deg);
+    }
+}
+
+@keyframes teeter-left {
+    0% {
+        transform: rotate(-7deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform:  rotate(-7deg);
+    }
+}
+
+@keyframes teeter-right {
+    0% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform:  rotate(7deg);
+    }
+}
+
+.animate-teeter {
+    animation: teeter 2s ease-in-out infinite;
+}
+.animate-teeter--1 {
+    animation-delay: 0;
+}
+.animate-teeter--2 {
+    animation-delay: 1s;
+}
+.animate-teeter-left {
+    animation: teeter-left 0.75s linear infinite;
+}
+.animate-teeter-right {
+    animation: teeter-right 0.75s linear infinite;
+}
+
+
+
+
 /* IMAGE SIZING ----------------------------------------*/
+
 img {
     height: auto;
 }
@@ -285,7 +445,6 @@ img {
 
 /* CONTENT ----------------------------------------*/
 
-/* burst items */
 .burst {
     background-repeat: no-repeat;
     background-position: center;
@@ -331,14 +490,17 @@ img {
     display: inline-block;
 }
 
-.tim {
-    color: var(--c-blue);
+.tim__grid {
+    margin-top: 50px;
+}
+.tim__figure {
     border: var(--border);
     background: var(--c-neon);
 }
 .tim__caption {
     text-align: left;
     margin: 5px 10px 10px;
+    color: var(--c-blue);
 }
 .tim__quote {
     background: transparent no-repeat center/contain url('img/speach-bubble.png');
@@ -353,27 +515,6 @@ img {
 
 .ribbon-section {
     margin: 150px 0 200px;
-}
-.ribbon {
-    display: grid;
-    align-content: center;
-    border: var(--border);
-    height: 75px;
-    width: 150%;
-    margin-left: -25%;
-    position: absolute;
-}
-.ribbon--neon {
-    transform: rotate(1.5deg);
-    color: var(--c-blue);
-    background: var(--c-neon);
-}
-.ribbon--blue {
-    position: relative;
-    z-index: 1;
-    transform: rotate(-9deg);
-    color: var(--c-orange);
-    background: var(--c-blue);
 }
 
 .doggy {
@@ -404,10 +545,8 @@ img {
     margin-top: 150px;
     margin-bottom: 150px;
 }
-.quips__title {
-    line-height: 0.8em;
-}
 .quips__group {
+    margin-top: 25px;
     margin-right: 50px;
     margin-left: 50px;
 }
