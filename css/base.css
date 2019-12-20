@@ -11,33 +11,34 @@
 
     --border:       3px solid var(--c-neon);
 
-    font-size:      32px;
+    font-size:      28px;
 }
 
-/* ---- an inbetween size */
+/* no more!
+/* ---- an inbetween size
 @media (max-width: 1360px) {
     :root {
         font-size: 31px;
     }
 }
-/* a standard size */
+/* a standard size
 @media (max-width: 1280px) {
     :root {
         font-size: 30px;
     }
 }
-/* ---- an inbetween size */
+/* ---- an inbetween size
 @media (max-width: 1256px) {
     :root {
         font-size: 29px;
     }
 }
-/* a standard size */
 @media (max-width: 1224px) {
     :root {
         font-size: 28px;
     }
-}
+} */
+
 /* ---- an inbetween size */
 @media (max-width: 1176px) {
     :root {
@@ -154,9 +155,10 @@ ul, ol, li {
 footer,
 section {
     /* margin: 50px 0; */
-    margin: 1.5625rem 0;
+    margin: 1.5625rem auto;
     /* padding: 0 50px; */
     padding: 0 1.5625rem;
+    max-width: 1200px;
 }
 /* fixes an overflow issue with the ribbon marquees */
 main {
@@ -166,11 +168,7 @@ main {
     /* padding-top: 75px; */
     padding-top: 2.34375rem;
 }
-figure {
-    margin: 0;
-}
 
-/* text */
 p {
     /* margin-top: 25px; */
     margin-top: 0.78125rem;
@@ -196,6 +194,11 @@ blockquote {
     /* font-size: 26px; */
     font-size: 0.8125rem;
     line-height: var(--lh1);
+    margin: 0;
+}
+
+figure {
+    margin: 0;
 }
 
 figcaption {
@@ -366,15 +369,10 @@ aside {
     grid-row-gap: 1.5625rem;
 }
 
-.constrain-lg,
 .constrain-md,
 .constrain-sm {
     margin-left: auto;
     margin-right: auto;
-}
-.constrain-lg {
-    /* width: 100%; */
-    max-width: 50rem;
 }
 .constrain-md {
     /* width: 85%; */

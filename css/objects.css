@@ -41,7 +41,11 @@
     /* max-width: 568px; */
     max-width: 17.75rem;
 }
-.img-cathead,
+.img-cathead {
+    /* initial images 370px */
+    /* max-width: 185px; */
+    max-width: 5.78125rem;
+}
 .img-doghead {
     /* initial images 370px */
     /* max-width: 185px; */
@@ -184,9 +188,8 @@
     width: 15.5625rem;
     /* height: 366px; */
     height: 11.4375rem;
-    position: relative;
-    /* left: -125px; */
-    left: -3.90625rem;
+    /* margin-left: -75px; */
+    margin-left: -2.34375rem;
     display: flex;
     align-content: center;
     /* padding: 50px; */
@@ -241,7 +244,7 @@
     color: var(--c-blue);
 }
 .quips__grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 .quips__group {
     /* margin-top: 50px; */
@@ -264,11 +267,11 @@
 .bags__grid {
     /* padding: 25px 0; */
     padding: 0.78125rem 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 50%);
 }
 
 .animalhead__grid {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
     /* padding-bottom: 50px; */
     padding-bottom: 1.5625rem;
 }
@@ -284,7 +287,7 @@
     padding-top: 0.78125rem;
 }
 .shame__grid {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: auto;
     grid-template-areas:
         "title-dl      title-copy"
