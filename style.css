@@ -133,6 +133,12 @@ section {
     margin: 50px 0;
     padding: 0 50px;
 }
+/* fixes an overflow issue with the ribbon marquees */
+main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
 ul, ol, li {
     list-style: none;
@@ -380,11 +386,21 @@ ul, ol, li {
 .animate-teeter--2 {
     animation-delay: 1s;
 }
-.animate-teeter-left {
-    animation: teeter-left 0.75s linear infinite;
-}
-.animate-teeter-right {
+.animate-teeter-TL {
     animation: teeter-right 0.75s linear infinite;
+    transform-origin: bottom right;
+}
+.animate-teeter-TR {
+    animation: teeter-left 0.75s linear infinite;
+    transform-origin: bottom left;
+}
+.animate-teeter-BL {
+    animation: teeter-left 0.75s linear infinite;
+    transform-origin: bottom right;
+}
+.animate-teeter-BR {
+    animation: teeter-right 0.75s linear infinite;
+    transform-origin: top left;
 }
 
 
@@ -514,8 +530,8 @@ img {
 }
 
 .ribbon-section {
-    margin: 150px 0 200px;
-    height: 50px;
+    margin: 150px 0 0;
+    height: 200px;
 }
 
 .doggy {
