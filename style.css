@@ -440,6 +440,10 @@ img {
 .hero-section {
     padding-top: 100px;
 }
+.hero__grid {
+    align-items: flex-start;
+}
+
 .burst {
     background-repeat: no-repeat;
     background-position: center;
