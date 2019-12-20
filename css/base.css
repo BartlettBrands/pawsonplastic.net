@@ -1,0 +1,404 @@
+:root {
+    --c-blue:       #052096;
+    --c-neon:       #DCFF48;
+    --c-orange:     #ED5E37;
+
+    --f-normal:     titling-gothic-fb, sans-serif;
+    --f-extended:   titling-gothic-fb-extended, sans-serif;
+    --f-wide:       titling-gothic-fb-wide, sans-serif;
+    --lh1:          1.45em;
+    --lh2:          1.2em;
+
+    --border:       3px solid var(--c-neon);
+
+    font-size:      32px;
+}
+
+/* ---- an inbetween size */
+@media (max-width: 1360px) {
+    :root {
+        font-size: 31px;
+    }
+}
+/* a standard size */
+@media (max-width: 1280px) {
+    :root {
+        font-size: 30px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 1256px) {
+    :root {
+        font-size: 29px;
+    }
+}
+/* a standard size */
+@media (max-width: 1224px) {
+    :root {
+        font-size: 28px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 1176px) {
+    :root {
+        font-size: 27px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 1128px) {
+    :root {
+        font-size: 26px;
+    }
+}
+/* a standard size */
+@media (max-width: 1080px) {
+    :root {
+        font-size: 25px;
+    }
+}
+/* a standard size */
+@media (max-width: 1024px) {
+    :root {
+        font-size: 24px;
+    }
+}
+/* used as the largest mobile style */
+/* a standard size */
+@media (max-width: 960px) {
+    :root {
+        font-size: 28px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 896px) {
+    :root {
+        font-size: 27px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 832px) {
+    :root {
+        font-size: 26px;
+    }
+}
+/* a standard size */
+@media (max-width: 768px) {
+    :root {
+        font-size: 25px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 672px) {
+    :root {
+        font-size: 24px;
+    }
+}
+/* ---- an inbetween size */
+@media (max-width: 576px) {
+    :root {
+        font-size: 23px;
+    }
+}
+/* a standard size */
+@media (max-width: 480px) {
+    :root {
+        font-size: 22px;
+    }
+}
+/* a standard size */
+@media (max-width: 414px) {
+    :root {
+        font-size: 21px;
+    }
+}
+/* a standard size */
+@media (max-width: 375px) {
+    :root {
+        font-size: 20px;
+    }
+}
+
+
+/* ELEMENTS ----------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    color: var(--c-neon);
+    background-color: var(--c-blue);
+    margin: 0;
+    padding: 0;
+    font-family: var(--f-normal);
+    line-height: var(--lh1);
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    overflow-x: hidden;
+}
+body {
+    max-width: 1560px;
+    margin-right: auto;
+    margin-left: auto;
+}
+img {
+    height: auto;
+    display: block;
+}
+ul, ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer,
+section {
+    /* margin: 50px 0; */
+    margin: 1.5625rem 0;
+    /* padding: 0 50px; */
+    padding: 0 1.5625rem;
+}
+/* fixes an overflow issue with the ribbon marquees */
+main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* padding-top: 75px; */
+    padding-top: 2.34375rem;
+}
+figure {
+    margin: 0;
+}
+
+/* text */
+p {
+    /* margin-top: 25px; */
+    margin-top: 0.78125rem;
+    /* margin-bottom: 25px; */
+    margin-bottom: 0.78125rem;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+    color: var(--c-orange);
+}
+
+big {
+    font-size: 1.4em;
+    line-height: var(--lh1);
+}
+
+blockquote {
+    /* font-size: 26px; */
+    font-size: 0.8125rem;
+    line-height: var(--lh1);
+}
+
+figcaption {
+    /* font-size: 19px; */
+    font-size: 0.59375rem;
+    line-height: var(--lh1);
+}
+
+cite {
+    font-family: var(--f-extended);
+    font-weight: 500;
+    font-style: normal;
+    /* font-size: 16px; */
+    font-size: 0.5rem;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+address {
+    font-style: normal;
+    /* margin-top: -25px; */
+    margin-top: -0.78125rem;
+}
+
+body > footer {
+    /* font-size: 20px; */
+    font-size: 0.625rem;
+    line-height: var(--lh1);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+h1, h2, h3, h4, h5, h6, aside {
+    font-family: var(--f-wide);
+    font-weight: bold;
+    line-height: var(--lh2);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 {
+    /* surrounds logo; ignored */
+}
+h2 {
+    /* font-size: 34px; */
+    font-size: 1.0625rem;
+}
+h2 big {
+    font-size: 1.1em;
+    line-height: var(--lh2);
+    font-weight: 900;
+}
+h3 {
+    /* font-size: 74px; */
+    font-size: 2.3125rem;
+}
+h4 {
+    /* font-size: 28px; */
+    font-size: 0.875rem;
+    /* margin-top: 50px; */
+    margin-top: 1.5625rem;
+}
+h5 {
+    /* font-size: 20px; */
+    font-size: 0.625rem;
+    /* margin-top: 25px; */
+    margin-top: 0.78125rem;
+}
+h6 {
+    /* font-size: 24px; */
+    font-size: 0.75rem;
+}
+aside {
+    /* font-size: 18px; */
+    font-size: 0.5625rem;
+    line-height: 145%;
+}
+
+@media (max-width: 960px) {
+    /* numbers are based on the mobile design which is the phone size
+       and the root font-size is 20px */
+
+    main,
+    footer,
+    section {
+        /* margin: 40px 0; */
+        margin: 2rem 0;
+        /* padding: 0 40px; */
+        padding: 0 2rem;
+    }
+
+    figcaption {
+        /* based on 12px */
+        font-size: 0.6rem;
+    }
+    h2 {
+        /* based on 24px */
+        font-size: 1.2rem;
+    }
+    h3 {
+        /* based on 44px */
+        font-size: 2.2rem;
+    }
+    h4 {
+        /* based on 20px */
+        font-size: 1rem;
+    }
+    h5, h6, blockquote {
+        /* based on 16px */
+        font-size: 0.8rem;
+    }
+    aside {
+        /* based on 14px */
+        font-size: 0.7rem;
+    }
+    body > footer {
+        /* based on 15px */
+        font-size: 0.75rem;
+    }
+}
+
+
+
+/* COMMON ----------------------------------------*/
+
+.bordered {
+    border: var(--border);
+}
+
+.rotate-left-sm {
+    transform: rotate(-7deg);
+}
+.rotate-right-sm {
+    transform: rotate(7deg);
+}
+.rotate-left-md {
+    transform: rotate(-12deg);
+}
+.rotate-right-md {
+    transform: rotate(12deg);
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.sr-only {
+    display: block;
+    position: absolute;
+    left: -3000px;
+    top: 0;
+    pointer-events: none;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.grid--has-gaps {
+    /* grid-column-gap: 50px; */
+    grid-column-gap: 1.5625rem;
+    /* grid-row-gap: 50px; */
+    grid-row-gap: 1.5625rem;
+}
+
+.constrain-lg,
+.constrain-md,
+.constrain-sm {
+    margin-left: auto;
+    margin-right: auto;
+}
+.constrain-lg {
+    /* width: 100%; */
+    max-width: 50rem;
+}
+.constrain-md {
+    /* width: 85%; */
+    max-width: 32rem;
+}
+.constrain-sm {
+    /* width: 80%; */
+    max-width: 25rem;
+}
+
+.pull-up {
+    /* margin-top: -25px; */
+    margin-top: -0.78125rem;
+}
+.yank-up {
+    /* margin-top: -100px; */
+    margin-top: -3.125rem;
+}
+
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    .pull-up,
+    .yank-up {
+        /* margin-top: 40px; */
+        margin-top: 2rem;
+    }
+}

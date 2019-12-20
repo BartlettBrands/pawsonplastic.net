@@ -1,0 +1,367 @@
+/* IMAGE SIZING ----------------------------------------*/
+
+.icon {
+    display: inline-block;
+    height: var(--lh1);
+    vertical-align: text-bottom;
+}
+.img-logo {
+    /* initial image 872px */
+    /* max-width: 436px; */
+    max-width: 13.625rem;
+}
+.img-POP-icon {
+    /* initial image 432px */
+    /* max-width: 216px; */
+    max-width: 6.75rem;
+}
+.img-arrow {
+    /* initial image 226px */
+    /* max-width: 113px; */
+    max-width: 3.53125rem;
+}
+.img-tim {
+    /* initial image 1184px */
+    /* max-width: 592px; */
+    max-width: 18.5rem;
+}
+.img-doggy-on-bed {
+    /* initial image 1752px */
+    /* max-width: 876px; */
+    max-width: 27.375rem;
+}
+.img-earth {
+    /* initial image 258px */
+    /* max-width: 129px; */
+    max-width: 4.03125rem;
+}
+.img-bag-clean,
+.img-bag-trash {
+    /* initial image 1136px */
+    /* max-width: 568px; */
+    max-width: 17.75rem;
+}
+.img-cathead,
+.img-doghead {
+    /* initial images 370px */
+    /* max-width: 185px; */
+    max-width: 5.78125rem;
+}
+.img-insta {
+    /* initial image 1080px */
+    /* max-width: 540px; */
+    max-width: 16.875rem;
+}
+.video-sham {
+    /* width: 640px; */
+    width: 20rem;
+    /* height: 427px; */
+    height: 13.34375rem;
+}
+
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    .img-logo {
+        /* max-width: 437px; */
+        max-width: 19rem;
+    }
+    .video-sham {
+        /* width: 640px; */
+        width: 27.8rem;
+        /* height: 427px; */
+        height: 18.565rem;
+    }
+}
+
+/* HERO SECTION ----------------------------------------*/
+
+.burst {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.burst--orange,
+.burst--outline {
+    /* initial image 464px */
+    /* width: 232px; */
+    width: 7.25rem;
+    /* height: 181px; */
+    height: 5.65625rem;
+}
+.burst--orange {
+    background-image: url('../img/burst-orange.png');
+}
+.burst--outline {
+    background-image: url('../img/burst-outline.png');
+    color: var(--c-orange);
+}
+.burst--neon {
+    background-image: url('../img/burst-neon.png');
+    /* initial image 478px */
+    /* width: 239px; */
+    width: 7.46875rem;
+    /* height: 173px; */
+    height: 5.40625rem;
+    color: var(--c-orange);
+}
+.burst__words {
+    display: inline-block;
+    /* margin: 0 30px; */
+    margin: 0 0.9375rem;
+}
+
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    .burst {
+        display: flex;
+        margin-top: 1.5em;
+    }
+}
+
+
+/* HERO SECTION ----------------------------------------*/
+
+.hero__grid {
+    align-items: flex-start;
+    grid-template-columns: min-content auto;
+}
+.hero__logo {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+.hero__video {
+    margin: 0 auto;
+}
+.arrow {
+    text-align: left;
+}
+.arrow__img {
+    display: block;
+}
+.arrow__text {
+    color: var(--c-orange);
+    /* margin-top: 25px; */
+    margin-top: 0.78125rem;
+    text-align: center;
+    display: inline-block;
+}
+
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    .hero__video {
+        margin-top: -2rem;
+    }
+}
+
+
+/* TIM SECTION ----------------------------------------*/
+
+.tim__grid {
+    /* margin-top: 100px; */
+    margin-top: 3.125rem;
+    grid-template-columns: min-content auto;
+}
+.tim__figure {
+    border: var(--border);
+    background: var(--c-neon);
+}
+.tim__caption {
+    text-align: left;
+    /* margin: 5px 10px 10px; */
+    margin: 0.15625rem 0.3125rem 0.3125rem;
+    color: var(--c-blue);
+}
+.tim__quote {
+    background: transparent no-repeat center/contain url('../img/speach-bubble.png');
+    /* initial image 996px */
+    /* width: 498px; */
+    width: 15.5625rem;
+    /* height: 366px; */
+    height: 11.4375rem;
+    position: relative;
+    /* left: -125px; */
+    left: -3.90625rem;
+    display: flex;
+    align-content: center;
+    /* padding: 50px; */
+    padding: 1.5625rem;
+}
+
+
+
+/* RIBBON SECTION ----------------------------------------*/
+
+.ribbon-section {
+    /* margin: 150px 0 0; */
+    margin: 4.6875rem 0 0;
+    /* height: 200px; */
+    height: 6.25rem;
+}
+
+.doggy {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+}
+.doggy__happy-earth,
+.doggy__burst1,
+.doggy__burst2 {
+    position: absolute;
+}
+.doggy__happy-earth {
+    right: 0;
+    top: 0;
+    height: auto;
+}
+.doggy__burst1 {
+    left: 5%;
+    top: 15%;
+}
+.doggy__burst2 {
+    right: 10%;
+    bottom: 15%;
+}
+
+
+
+/* QUIPS SECTION (testamonials) ----------------------------------------*/
+
+.quips-section {
+    /* margin-top: 150px; */
+    margin-top: 4.6875rem;
+    /* margin-bottom: 150px; */
+    margin-bottom: 4.6875rem;
+    background: var(--c-neon);
+    color: var(--c-blue);
+}
+.quips__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.quips__group {
+    /* margin-top: 50px; */
+    margin-top: 1.5625rem;
+}
+.quips__quote {
+    /* margin-bottom: 5px; */
+    margin-bottom: 0.15625rem;
+}
+.quips__cite {
+    display: block;
+    /* margin-bottom: 50px; */
+    margin-bottom: 1.5625rem;
+}
+
+
+
+/* ACTIONS SECTION (shame and donate) ----------------------------------------*/
+
+.bags__grid {
+    /* padding: 25px 0; */
+    padding: 0.78125rem 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.animalhead__grid {
+    grid-template-columns: auto auto auto auto;
+    /* padding-bottom: 50px; */
+    padding-bottom: 1.5625rem;
+}
+.animalhead__sound {
+    display: block;
+    /* margin: 25px 0; */
+    margin: 0.78125rem 0;
+    color: var(--c-orange);
+}
+
+.shame {
+    /* padding-top: 25px; */
+    padding-top: 0.78125rem;
+}
+.shame__grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "title-dl      title-copy"
+        "insta-graphic insta-text";
+    align-items: stretch;
+    /* margin-bottom: 25px; */
+    margin-bottom: 0.78125rem;
+}
+.shame__title-dl {
+    grid-area: title-dl;
+}
+.shame__title-copy {
+    grid-area: title-copy;
+}
+.shame__insta-graphic,
+.shame__insta-text {
+    /* margin: -25px 0 0; */
+    margin: -0.78125rem 0 0;
+}
+.shame__insta-graphic {
+    grid-area: insta-graphic;
+}
+.shame__insta-text {
+    grid-area: insta-text;
+    /* padding: 25px; */
+    padding: 0.78125rem;
+    background: var(--c-neon);
+    color: var(--c-orange);
+}
+
+.donate {
+    position: relative;
+    /* margin: 0 auto 75px; */
+    margin: 0 auto 2.34375rem;
+    /* padding: 50px 0; */
+    padding: 1.5625rem 0;
+}
+.donate__burst1,
+.donate__burst2 {
+    position: absolute;
+    /* padding: 0 25px; */
+    padding: 0 0.78125rem;
+}
+.donate__burst1 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.donate__burst2 {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+
+
+/* FOOTER ----------------------------------------*/
+
+.footer__grid {
+    grid-template-columns: auto max-content auto;
+    align-items: flex-end;
+    justify-content: stretch;
+    /* margin-top: 125px; */
+    margin-top: 3.90625rem;
+}
+.footer__img {
+    display: block;
+    /* margin-bottom: 25px; */
+    margin-bottom: 0.78125rem;
+}
+
+
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    .footer__insta-handle {
+        /* based on 20px at smallest size */
+        font-size: 1rem;
+        line-height: 1.8em;
+    }
+}

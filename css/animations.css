@@ -1,0 +1,205 @@
+/* MARQUEE ----------------------------------------*/
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.marquee {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* top and bottom marquees */
+.marquee--fixed-top,
+.marquee--fixed-bottom {
+    position: fixed;
+    z-index: 10;
+    /* height: 50px; */
+    height: 1.5625rem;
+    background: var(--c-blue);
+}
+.marquee--fixed-top {
+    top: 0;
+    border-bottom: var(--border);
+}
+.marquee--fixed-bottom {
+    bottom: 0;
+    border-top: var(--border);
+}
+.marquee__fixed-animation {
+    position: absolute;
+    animation: marquee 18s linear infinite;
+    left: 100%;
+    font-family: var(--f-extended);
+    font-weight: 900;
+    /* line-height: 50px; */
+    line-height: 1.5625rem;
+    text-transform: none;
+}
+.marquee__fixed-animation--1 {
+    animation-delay: 0s;
+}
+.marquee__fixed-animation--2 {
+    animation-delay: 6s;
+}
+.marquee__fixed-animation--3 {
+    animation-delay: 12s;
+}
+
+/* ribbon section */
+.marquee--ribbon {
+    border: var(--border);
+    /* height: 75px; */
+    height: 1.5625rem;
+    width: 150%;
+    left: -25%;
+}
+.marquee--ribbon--neon {
+    z-index: 1;
+    transform: rotate(1.5deg);
+    color: var(--c-blue);
+    background: var(--c-neon);
+}
+.marquee--ribbon--blue {
+    z-index: 2;
+    transform: rotate(-9deg);
+    color: var(--c-orange);
+    background: var(--c-blue);
+}
+.marquee__ribbon-animation {
+    position: absolute;
+    animation: marquee 30s linear infinite;
+    left: 100%;
+    /* line-height: 75px; */
+    line-height: 1.5625rem;
+}
+.marquee__ribbon-animation--1 {
+    animation-delay: 0s;
+}
+.marquee__ribbon-animation--2 {
+    animation-delay: 10s;
+}
+.marquee__ribbon-animation--3 {
+    animation-delay: 20s;
+}
+
+/* quips (testimonials) title */
+.marquee--quips-title {
+    z-index: 1;
+    line-height: 0.8em;
+    height: 1em;
+}
+.marquee__quips-animation {
+    position: absolute;
+    animation: marquee 24s linear infinite;
+    left: 100%;
+}
+.marquee__quips-animation--1 {
+    animation-delay: 0s;
+}
+.marquee__quips-animation--2 {
+    animation-delay: 8s;
+}
+.marquee__quips-animation--3 {
+    animation-delay: 16s;
+}
+
+
+
+/* WOW ----------------------------------------*/
+
+@keyframes wow {
+    0% {
+        transform: scale(1) rotate(-7deg);
+    }
+    50% {
+        transform: scale(1.25) rotate(7deg);
+    }
+    100% {
+        transform: scale(1) rotate(-7deg);
+    }
+}
+
+/* only used in hero 'wow' */
+.animate-wow {
+    animation: wow 1.5s linear infinite;
+}
+
+
+
+/* TEETER ----------------------------------------*/
+
+@keyframes teeter {
+    0% {
+        transform: rotate(-7deg);
+    }
+    50% {
+        transform: rotate(7deg);
+    }
+    100% {
+        transform:  rotate(-7deg);
+    }
+}
+
+@keyframes teeter-left {
+    0% {
+        transform: rotate(-7deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform:  rotate(-7deg);
+    }
+}
+
+@keyframes teeter-right {
+    0% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform:  rotate(7deg);
+    }
+}
+
+.animate-teeter {
+    animation: teeter 2s ease-in-out infinite;
+}
+.animate-teeter--1 {
+    animation-delay: 0s;
+}
+.animate-teeter--2 {
+    animation-delay: 1s;
+}
+
+/* specific to dog can cat head 'voices' */
+.animate-teeter--TL {
+    animation: teeter-right 0.75s linear infinite;
+    transform-origin: bottom right;
+}
+.animate-teeter--TR {
+    animation: teeter-left 0.75s linear infinite;
+    transform-origin: bottom left;
+}
+.animate-teeter--BL {
+    animation: teeter-left 0.75s linear infinite;
+    transform-origin: bottom right;
+}
+.animate-teeter--BR {
+    animation: teeter-right 0.75s linear infinite;
+    transform-origin: top left;
+}
