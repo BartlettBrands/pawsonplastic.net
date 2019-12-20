@@ -61,7 +61,7 @@
 .marquee--ribbon {
     border: var(--border);
     /* height: 75px; */
-    height: 1.5625rem;
+    height: 2.34375rem;
     width: 150%;
     left: -25%;
 }
@@ -82,7 +82,7 @@
     animation: marquee 30s linear infinite;
     left: 100%;
     /* line-height: 75px; */
-    line-height: 1.5625rem;
+    line-height: 2.34375rem;
 }
 .marquee__ribbon-animation--1 {
     animation-delay: 0s;
