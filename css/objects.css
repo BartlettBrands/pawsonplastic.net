@@ -39,7 +39,8 @@
 .img-bag-trash {
     /* initial image 1136px */
     /* max-width: 568px; */
-    max-width: 17.75rem;
+    width: 17.75rem;
+    max-width: 100%;
 }
 .img-cathead {
     /* initial images 370px */
@@ -54,7 +55,8 @@
 .img-insta {
     /* initial image 1080px */
     /* max-width: 540px; */
-    max-width: 16.875rem;
+    width: 16.875rem;
+    max-width: 100%;
 }
 .video-sham {
     /* width: 640px; */
@@ -267,7 +269,7 @@
 .bags__grid {
     /* padding: 25px 0; */
     padding: 0.78125rem 0;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, auto);
 }
 
 .animalhead__grid {
