@@ -142,7 +142,6 @@ html, body {
     overflow-x: hidden;
 }
 body {
-    max-width: 1560px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -283,7 +282,6 @@ aside {
     /* numbers are based on the mobile design which is the phone size
        and the root font-size is 20px */
 
-    main,
     footer,
     section {
         /* margin: 40px 0; */
@@ -341,14 +339,6 @@ aside {
 }
 .rotate-right-md {
     transform: rotate(12deg);
-}
-
-.align-left {
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
 }
 
 .sr-only {

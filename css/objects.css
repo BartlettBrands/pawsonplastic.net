@@ -114,6 +114,18 @@
     border-top: var(--border);
 }
 
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    .marquee {
+        /* line-height: 40px; */
+        line-height: 2rem;
+    }
+    .marquee--fixed-top,
+    .marquee--fixed-bottom {
+        /* height: 40px; */
+        height: 2rem;
+    }
+}
 
 
 /* HERO SECTION ----------------------------------------*/
@@ -240,8 +252,8 @@
 /* RIBBON SECTION ----------------------------------------*/
 
 .ribbon-section {
-    /* margin: 150px 0 0; */
-    margin: 4.6875rem 0 0;
+    /* margin: 150px auto 0; */
+    margin: 4.6875rem auto 0;
     /* height: 200px; */
     height: 6.25rem;
 }
@@ -422,26 +434,50 @@
 
 .footer__grid {
     grid-template-columns: auto max-content auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "calphalon icon gratitude";
     align-items: flex-end;
     justify-content: stretch;
     /* margin-top: 125px; */
     margin-top: 3.90625rem;
 }
-.footer__img {
+.footer__calphalon {
+    grid-area: calphalon;
+    text-align: left;
+}
+.footer__icon {
+    grid-area: icon;
     display: block;
     /* margin-bottom: 25px; */
     margin-bottom: 0.78125rem;
 }
-.footer__insta-handle {
-    text-decoration: none;
+.footer__gratitude {
+    grid-area: gratitude;
+    text-align: right;
 }
 
 
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
+
     .footer__insta-handle {
         /* based on 20px at smallest size */
         font-size: 1rem;
         line-height: 1.8em;
+    }
+    .footer__grid {
+        grid-template-columns: max-content;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "icon"
+            "calphalon"
+            "gratitude";
+        justify-content: center;
+        justify-items: center;
+    }
+    .footer__calphalon,
+    .footer__gratitude {
+        text-align: center;
     }
 }
