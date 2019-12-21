@@ -58,9 +58,9 @@
 }
 
 /* ribbon section */
-.marquee--ribbon {
+/*.marquee--ribbon {
     border: var(--border);
-    /* height: 75px; */
+    /* height: 75px;
     height: 2.34375rem;
     width: 150%;
     left: -25%;
@@ -81,7 +81,7 @@
     position: absolute;
     animation: marquee 30s linear infinite;
     left: 100%;
-    /* line-height: 75px; */
+    /* line-height: 75px;
     line-height: 2.34375rem;
 }
 .marquee__ribbon-animation--1 {
@@ -92,10 +92,10 @@
 }
 .marquee__ribbon-animation--3 {
     animation-delay: 20s;
-}
+}*/
 
 /* quips (testimonials) title */
-.marquee--quips-title {
+/*.marquee--quips-title {
     z-index: 1;
     line-height: 0.8em;
     height: 1em;
@@ -114,7 +114,7 @@
 .marquee__quips-animation--3 {
     animation-delay: 16s;
 }
-
+*/
 
 
 /* WOW ----------------------------------------*/

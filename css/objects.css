@@ -26,9 +26,9 @@
     max-width: 18.5rem;
 }
 .img-doggy-on-bed {
-    /* initial image 1752px */
-    /* max-width: 876px; */
-    max-width: 27.375rem;
+    /* initial image 2040px */
+    /* max-width: 1020px; */
+    max-width: 31.875rem;
 }
 .img-earth {
     /* initial image 258px */
@@ -208,6 +208,33 @@
     /* height: 200px; */
     height: 6.25rem;
 }
+.ribbon {
+    position: absolute;
+    left: -200%;
+    /* height: 75px; */
+    height: 2.34375rem;
+    width: 500%;
+    border: var(--border);
+    /* line-height: 75px; */
+    line-height: 2.34375rem;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+.ribbon--neon {
+    z-index: 1;
+    transform: rotate(1.5deg);
+    color: var(--c-blue);
+    background: var(--c-neon);
+}
+.ribbon--blue {
+    z-index: 2;
+    transform: rotate(-9deg);
+    color: var(--c-orange);
+    background: var(--c-blue);
+}
 
 .doggy {
     display: inline-block;
@@ -244,6 +271,13 @@
     margin-bottom: 4.6875rem;
     background: var(--c-neon);
     color: var(--c-blue);
+}
+.quips__title {
+    z-index: 1;
+    line-height: 0.7em;
+    height: 1em;
+    white-space: nowrap;
+    margin-left: -2rem;
 }
 .quips__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -330,17 +364,13 @@
 .donate__burst1,
 .donate__burst2 {
     position: absolute;
-    /* padding: 0 25px; */
-    padding: 0 0.78125rem;
 }
 .donate__burst1 {
-    position: absolute;
     top: 10%;
-    left: 5%;
+    left: 0;
 }
 .donate__burst2 {
-    position: absolute;
-    right: 5%;
+    right: 0;
     bottom: 5%;
 }
 
@@ -368,5 +398,6 @@
         /* based on 20px at smallest size */
         font-size: 1rem;
         line-height: 1.8em;
+        text-decoration: none;
     }
 }
