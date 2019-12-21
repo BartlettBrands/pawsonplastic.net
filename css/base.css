@@ -11,6 +11,7 @@
 
     --border:       3px solid var(--c-neon);
 
+    --max-width:    1200px;
     /* The widths max out at 1200px, but everything is calculated against 32px from the intial design,
         so this is here as a "rem base", but it gets overwritten immediately by the media query */
     font-size:      32px;
@@ -160,7 +161,7 @@ section {
     margin: 1.5625rem auto;
     /* padding: 0 50px; */
     padding: 0 1.5625rem;
-    max-width: 1200px;
+    max-width: var(--max-width);
 }
 /* fixes an overflow issue with the ribbon marquees */
 main {
