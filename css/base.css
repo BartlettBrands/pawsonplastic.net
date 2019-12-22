@@ -1,129 +1,137 @@
 :root {
-    --c-blue:       #052096;
-    --c-neon:       #DCFF48;
-    --c-orange:     #ED5E37;
+    --c-blue:           #052096ff;
+    --c-orange:         #ED5E37ff;
+    --c-orange-faded:   #ED5E3780;
+    --c-neon:           #DCFF48ff;
+    --c-neon-faded:     #DCFF4880;
 
-    --f-normal:     titling-gothic-fb, sans-serif;
-    --f-extended:   titling-gothic-fb-extended, sans-serif;
-    --f-wide:       titling-gothic-fb-wide, sans-serif;
-    --lh1:          1.45em;
-    --lh2:          1.2em;
+    --f-size:           32px;
+    --f-normal:         titling-gothic-fb, sans-serif;
+    --f-extended:       titling-gothic-fb-extended, sans-serif;
+    --f-wide:           titling-gothic-fb-wide, sans-serif;
+    --lh1:              1.45em;
+    --lh2:              1.2em;
 
-    --border:       3px solid var(--c-neon);
+    --border:           3px solid var(--c-neon);
 
-    --max-width:    1200px;
-    /* The widths max out at 1200px, but everything is calculated against 32px from the intial design,
-        so this is here as a "rem base", but it gets overwritten immediately by the media query */
-    font-size:      32px;
+    --max-width:        1200px;
+
+    --base:             25px;
+    /* base / max font-size */
+    --calc-base:        calc(25 / 32);
+    /* calculations adding in 'rem' */
+    --calc-b-half:      calc(0.5rem * var(--calc-base));
+    --calc-b1:          calc(1rem * var(--calc-base));
+    --calc-b1-half:     calc(1.5rem * var(--calc-base));
+    --calc-b2:          calc(2rem * var(--calc-base));
+    --calc-b3:          calc(3rem * var(--calc-base));
+    --calc-b4:          calc(4rem * var(--calc-base));
+    --calc-b5:          calc(5rem * var(--calc-base));
+    --calc-b6:          calc(6rem * var(--calc-base));
+    --calc-b7:          calc(7rem * var(--calc-base));
+    --calc-b8:          calc(8rem * var(--calc-base));
+    --calc-b9:          calc(9rem * var(--calc-base));
+    --calc-b10:         calc(10rem * var(--calc-base));
 }
 
-/* no more!
-/* ---- an inbetween size
-@media (max-width: 1360px) {
-    :root {
-        font-size: 31px;
-    }
-}
-/* a standard size
-@media (max-width: 1280px) {
-    :root {
-        font-size: 30px;
-    }
-}
-/* ---- an inbetween size
-@media (max-width: 1256px) {
-    :root {
-        font-size: 29px;
-    }
-}
+/*  The box widths max out at 1200px, which for font sizes is 28px.
+    However, everything is calculated against 32px from the intial design at 1440px.
+    This is why 32px is the REM base and defined in the root, even though it gets overwritten immediately by the media query
+ */
+
 /* a standard size */
 @media (min-width: 1177px) {
     :root {
-        font-size: 28px;
+        --f-size: 28px;
     }
 }
 /* ---- an inbetween size */
 @media (max-width: 1176px) {
     :root {
-        font-size: 27px;
+        --f-size: 27px;
     }
 }
 /* ---- an inbetween size */
 @media (max-width: 1128px) {
     :root {
-        font-size: 26px;
+        --f-size: 26px;
     }
 }
 /* a standard size */
 @media (max-width: 1080px) {
     :root {
-        font-size: 25px;
+        --f-size: 25px;
     }
 }
 /* a standard size */
 @media (max-width: 1024px) {
     :root {
-        font-size: 24px;
+        --f-size: 24px;
     }
 }
 /* used as the largest mobile style */
 /* a standard size */
 @media (max-width: 960px) {
     :root {
-        font-size: 28px;
+        --f-size: 28px;
+        --border: 2px solid var(--c-neon);
+        --base: 20px;
+        /* base / min font-size */
+        --calc-base: calc(20 / 20);
     }
 }
 /* ---- an inbetween size */
 @media (max-width: 896px) {
     :root {
-        font-size: 27px;
+        --f-size: 27px;
     }
 }
 /* ---- an inbetween size */
 @media (max-width: 832px) {
     :root {
-        font-size: 26px;
+        --f-size: 26px;
     }
 }
 /* a standard size */
 @media (max-width: 768px) {
     :root {
-        font-size: 25px;
+        --f-size: 25px;
     }
 }
 /* ---- an inbetween size */
 @media (max-width: 672px) {
     :root {
-        font-size: 24px;
+        --f-size: 24px;
     }
 }
 /* ---- an inbetween size */
 @media (max-width: 576px) {
     :root {
-        font-size: 23px;
+        --f-size: 23px;
     }
 }
 /* a standard size */
 @media (max-width: 480px) {
     :root {
-        font-size: 22px;
+        --f-size: 22px;
     }
 }
 /* a standard size */
 @media (max-width: 414px) {
     :root {
-        font-size: 21px;
+        --f-size: 21px;
     }
 }
 /* a standard size */
 @media (max-width: 375px) {
     :root {
-        font-size: 20px;
+        --f-size: 20px;
     }
 }
 
 
-/* ELEMENTS ----------------------------------------*/
+
+/* ELEMENTS (MORE STRUCTURAL) ----------------------------------------*/
 
 * {
     box-sizing: border-box;
@@ -134,6 +142,7 @@ html, body {
     background-color: var(--c-blue);
     margin: 0;
     padding: 0;
+    font-size: var(--f-size);
     font-family: var(--f-normal);
     line-height: var(--lh1);
     font-style: normal;
@@ -156,10 +165,9 @@ ul, ol, li {
 }
 footer,
 section {
-    /* margin: 50px 0; */
-    margin: 1.5625rem auto;
-    /* padding: 0 50px; */
-    padding: 0 1.5625rem;
+    // margin: var(--calc-b2) auto;
+    margin: var(--calc-b2) auto;
+    padding: 0 var(--calc-b2);
     max-width: var(--max-width);
 }
 /* fixes an overflow issue with the ribbon marquees */
@@ -167,23 +175,40 @@ main {
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* padding-top: 75px; */
-    padding-top: 2.34375rem;
+    padding-top: var(--calc-b3);
+}
+figure {
+    margin: 0;
 }
 
+@media (max-width: 960px) {
+    /* 20px root font-size for smallest size */
+    footer,
+    section {
+        padding: 0;
+    }
+    main {
+        padding-top: var(--calc-b1-half);
+    }
+}
+
+
+/* ELEMENTS (MORE TEXTUAL) ----------------------------------------*/
+
 p {
-    /* margin-top: 25px; */
-    margin-top: 1.171875rem;
-    /* margin-bottom: 25px; */
-    margin-bottom: 0.78125rem;
+    margin-top: var(--calc-b1-half);
+    margin-bottom: var(--calc-b1);
 }
 a {
     color: inherit;
+    text-decoration: none;
+    border-bottom: 0.03125em solid var(--c-neon-faded);
 }
 a:hover,
 a:active,
 a:focus {
     color: var(--c-orange);
+    border-bottom-color: var(--c-orange-faded);
 }
 
 big {
@@ -195,10 +220,6 @@ blockquote {
     /* font-size: 26px; */
     font-size: 0.8125rem;
     line-height: var(--lh1);
-    margin: 0;
-}
-
-figure {
     margin: 0;
 }
 
@@ -221,7 +242,7 @@ cite {
 address {
     font-style: normal;
     /* margin-top: -25px; */
-    margin-top: -0.78125rem;
+    margin-top: calc(var(--calc-b1) * -1);
 }
 
 body > footer {
@@ -260,13 +281,13 @@ h4 {
     /* font-size: 28px; */
     font-size: 0.875rem;
     /* margin-top: 50px; */
-    margin-top: 1.5625rem;
+    margin-top: var(--calc-b2);
 }
 h5 {
     /* font-size: 20px; */
     font-size: 0.625rem;
     /* margin-top: 25px; */
-    margin-top: 0.78125rem;
+    margin-top: var(--calc-b1);
 }
 h6 {
     /* font-size: 24px; */
@@ -275,21 +296,19 @@ h6 {
 aside {
     /* font-size: 18px; */
     font-size: 0.5625rem;
-    line-height: 145%;
+    line-height: var(--lh2);
 }
 
 @media (max-width: 960px) {
     /* numbers are based on the mobile design which is the phone size
        and the root font-size is 20px */
 
-    footer,
-    section {
-        /* margin: 40px 0; */
-        margin: 2rem 0;
-        /* padding: 0 40px; */
-        padding: 0 2rem;
+    p {
+        margin-top: var(--calc-b1);
     }
-
+    a {
+        border-width: 0.09375em;
+    }
     figcaption {
         /* based on 12px */
         font-size: 0.6rem;
@@ -355,10 +374,10 @@ aside {
     justify-content: center;
 }
 .grid--has-gaps {
-    /* grid-column-gap: 50px; */
-    grid-column-gap: 1.5625rem;
-    /* grid-row-gap: 50px; */
-    grid-row-gap: 1.5625rem;
+    grid-column-gap: var(--calc-b2);
+         column-gap: var(--calc-b2);
+    grid-row-gap: var(--calc-b2);
+         row-gap: var(--calc-b2);
 }
 
 .constrain-md,
@@ -367,28 +386,25 @@ aside {
     margin-right: auto;
 }
 .constrain-md {
-    /* width: 85%; */
     max-width: 32rem;
 }
 .constrain-sm {
-    /* width: 80%; */
     max-width: 25rem;
 }
 
-.pull-up {
-    /* margin-top: -25px; */
-    margin-top: -0.78125rem;
+.remove-on-desktop {
+    display: none;
 }
-.yank-up {
-    /* margin-top: -100px; */
-    margin-top: -3.125rem;
+.remove-on-mobile {
+    display: inline;
 }
 
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
-    .pull-up,
-    .yank-up {
-        /* margin-top: 40px; */
-        margin-top: 2rem;
+    .remove-on-desktop {
+        display: inline;
+    }
+    .remove-on-mobile {
+        display: none;
     }
 }
