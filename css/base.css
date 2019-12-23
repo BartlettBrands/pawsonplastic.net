@@ -24,6 +24,7 @@
     --calc-b1:          calc(1rem * var(--calc-base));
     --calc-b1-half:     calc(1.5rem * var(--calc-base));
     --calc-b2:          calc(2rem * var(--calc-base));
+    --calc-b2-half:     calc(2.5rem * var(--calc-base));
     --calc-b3:          calc(3rem * var(--calc-base));
     --calc-b4:          calc(4rem * var(--calc-base));
     --calc-b5:          calc(5rem * var(--calc-base));
@@ -76,6 +77,7 @@
         --f-size: 28px;
         --border: 2px solid var(--c-neon);
         --base: 20px;
+        --max-width: 768px;
         /* base / min font-size */
         --calc-base: calc(20 / 20);
     }
@@ -165,7 +167,6 @@ ul, ol, li {
 }
 footer,
 section {
-    // margin: var(--calc-b2) auto;
     margin: var(--calc-b2) auto;
     padding: 0 var(--calc-b2);
     max-width: var(--max-width);
@@ -185,13 +186,12 @@ figure {
     /* 20px root font-size for smallest size */
     footer,
     section {
-        padding: 0;
+        padding: 0 var(--calc-b1);
     }
     main {
         padding-top: var(--calc-b1-half);
     }
 }
-
 
 /* ELEMENTS (MORE TEXTUAL) ----------------------------------------*/
 
@@ -392,19 +392,10 @@ aside {
     max-width: 25rem;
 }
 
-.remove-on-desktop {
-    display: none;
-}
-.remove-on-mobile {
-    display: inline;
-}
-
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
-    .remove-on-desktop {
-        display: inline;
-    }
-    .remove-on-mobile {
-        display: none;
+    .constrain-md,
+    .constrain-sm {
+        max-width: var(--max-width);
     }
 }
