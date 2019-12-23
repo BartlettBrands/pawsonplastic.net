@@ -171,6 +171,9 @@ section {
     padding: 0 var(--calc-b2);
     max-width: var(--max-width);
 }
+footer {
+    margin-bottom: var(--calc-b3);
+}
 /* fixes an overflow issue with the ribbon marquees */
 .main-content {
     position: relative;
@@ -390,25 +393,6 @@ aside {
 }
 .constrain-sm {
     max-width: 25rem;
-}
-
-.not-touch-enabled .hover-oval {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.not-touch-enabled .hover-oval::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: var(--c-blue);
-    border: 1px solid var(--c-neon);
-    padding: var(--calc-b-half) var(--calc-b1-half);
-    white-space: nowrap;
-    font-size: 0.5rem;
-    color: var(--c-neon);
-    pointer-events: none;
 }
 
 @media (max-width: 960px) {

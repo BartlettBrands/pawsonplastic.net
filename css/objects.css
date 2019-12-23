@@ -59,10 +59,11 @@
     max-width: 100%;
 }
 .video-sham {
+    /* initial video = 501.81/368 */
     /* width: 640px; */
     width: 20rem;
-    /* height: 427px; */
-    height: 13.34375rem;
+    /* height: 469.34px; */
+    height: 14.667rem;
 }
 
 @media (max-width: 960px) {
@@ -109,12 +110,18 @@
         max-width: 27rem;
     }
     .video-sham {
-        /* width: 640px; NEW VALUE */
+        /* initial video = 501.81/368 */
+        /* width: 640px; */
+        width: 20rem;
+        /* height: 469.34px; */
+        height: 14.667rem;
+    }
+    .video-sham {
+        /* initial video = 501.81/368 NEW VALUE */
         width: 100vw;
         max-width: 640px;
-        /* height: 427px; */
-        height: 66.71875vw;
-        max-height: 427px;
+        height: 73.334529vw;
+        max-height: 469.34px;
     }
 }
 
@@ -262,11 +269,6 @@
 .hero__text {
     margin-top: calc(var(--calc-b1) * -1);
 }
-
-.not-touch-enabled .hover-oval.hero__video-wrapper::after {
-    content: 'Watch Me!';
-}
-
 
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
