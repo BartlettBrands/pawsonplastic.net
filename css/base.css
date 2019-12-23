@@ -342,6 +342,11 @@ aside {
     }
 }
 
+@media (max-width: 480px) {
+    h3 {
+        font-size: 2rem;
+    }
+}
 
 
 /* COMMON ----------------------------------------*/
