@@ -105,7 +105,8 @@
     }
     .img-insta {
         /* max-width: 540px; */
-        width: 27rem;
+        width: 100%;
+        max-width: 27rem;
     }
     .video-sham {
         /* width: 640px; NEW VALUE */
@@ -138,18 +139,20 @@
     display: flex;
     align-content: center;
     overflow: hidden;
+    height: var(--calc-b2);
+    background: var(--c-blue);
     text-align: left;
     white-space: nowrap;
     font-family: var(--f-extended);
     font-weight: 900;
-    line-height: var(--calc-b2);
+    line-height: 0em;
+    /* same as aside */
+    font-size: 0.7rem;
 }
 .marquee--fixed-top,
 .marquee--fixed-bottom {
     position: fixed;
     z-index: 10;
-    height: var(--calc-b2);
-    background: var(--c-blue);
 }
 .marquee--fixed-top {
     top: 0;
@@ -161,20 +164,17 @@
 }
 .marquee3k__wrapper,
 .marquee3k__copy {
-    font-size: inherit;
-    line-height: inherit;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 960px) and (min-width: 768px) {
     /* 20px root font-size for smallest size */
     .marquee {
-        font-size: 0.5em;
-        line-height: var(--calc-b1-half);
-    }
-    .marquee--fixed-top,
-    .marquee--fixed-bottom {
         height: var(--calc-b1-half);
+        font-size: 0.5rem;
     }
 }
 
@@ -269,7 +269,7 @@
 }
 
 .not-touch-enabled .hover-oval.hero__video-wrapper::after {
-    content: 'Click to Play';
+    content: 'Watch Me!';
 }
 
 
@@ -621,6 +621,9 @@
 }
 .shame__insta-graphic {
     grid-area: insta-graphic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .shame__insta-wrapper {
     grid-area: insta-text;

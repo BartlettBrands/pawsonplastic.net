@@ -172,7 +172,7 @@ section {
     max-width: var(--max-width);
 }
 /* fixes an overflow issue with the ribbon marquees */
-main {
+.main-content {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -188,7 +188,7 @@ figure {
     section {
         padding: 0 var(--calc-b1);
     }
-    main {
+    .main-content {
         padding-top: var(--calc-b1-half);
     }
 }
@@ -401,7 +401,6 @@ aside {
 .not-touch-enabled .hover-oval::after {
     content: '';
     position: absolute;
-    left: -3000px;
     border-radius: 50%;
     background: var(--c-blue);
     border: 1px solid var(--c-neon);
@@ -409,9 +408,7 @@ aside {
     white-space: nowrap;
     font-size: 0.5rem;
     color: var(--c-neon);
-}
-.not-touch-enabled .hover-oval:hover::after {
-    left: auto;
+    pointer-events: none;
 }
 
 @media (max-width: 960px) {
