@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/miv0zyh.css">
     <script src="./js/fontfaceobserver-master/fontfaceobserver.js"></script>
     <script src="./js/Marquee3000-master/marquee3k.js"></script>
+    <script src="./js/dist/clipboard.min.js"></script>
 </head>
-<body>
+<body id="body">
 
 <header>
     <aside class="marquee3k marquee marquee--fixed-top" data-speed="3" data-pausable="false">
@@ -31,7 +32,9 @@
                     Paws on Plastic! Sleep System For Strays
                 </span>
             </h1>
-            <iframe src="https://player.vimeo.com/video/3711680" class="hero__video video-sham bordered" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="hero__video-wrapper hover-oval">
+                <iframe src="https://player.vimeo.com/video/3711680" class="video-sham bordered" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="hero__content">
             <h2 class="hero__title">
@@ -247,7 +250,9 @@
                     <h5 class="shame__title-dl">
                         Download This!
                     </h5>
-                    <img class="shame__insta-graphic img-insta" src="./img/insta-post-pause-mailer-mania.png" alt="Press Pause on Mailer Mania graphic">
+                    <figure class="shame__insta-graphic">
+                        <img class="img-insta" src="./img/insta-post-pause-mailer-mania.png" alt="Press Pause on Mailer Mania graphic">
+                    </figure>
                     <h5 class="shame__title-copy">
                         Copy That!
                     </h5>

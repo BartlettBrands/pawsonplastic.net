@@ -392,6 +392,28 @@ aside {
     max-width: 25rem;
 }
 
+.not-touch-enabled .hover-oval {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.not-touch-enabled .hover-oval::after {
+    content: '';
+    position: absolute;
+    left: -3000px;
+    border-radius: 50%;
+    background: var(--c-blue);
+    border: 1px solid var(--c-neon);
+    padding: var(--calc-b-half) var(--calc-b1-half);
+    white-space: nowrap;
+    font-size: 0.5rem;
+    color: var(--c-neon);
+}
+.not-touch-enabled .hover-oval:hover::after {
+    left: auto;
+}
+
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
     .constrain-md,
