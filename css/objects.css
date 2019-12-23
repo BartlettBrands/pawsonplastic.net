@@ -117,11 +117,6 @@
         max-height: 427px;
     }
 }
-// @media (max-width: 576px) {
-//     .img-doggy-on-bed {
-//         max-width: 110%;
-//     }
-// }
 
 @media (max-width: 480px) {
     .img-tim {
@@ -638,13 +633,6 @@
     line-height: var(--lh1);
     margin: 0;
 }
-
-// .not-touch-enabled .hover-oval.shame__insta-graphic::after {
-//     content: 'Click to Copy Image';
-// }
-// .not-touch-enabled .hover-oval.shame__insta-wrapper::after {
-//     content: 'Click to Copy Text';
-// }
 
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
