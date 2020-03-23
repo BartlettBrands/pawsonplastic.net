@@ -1,4 +1,4 @@
-on: deploy
+on: push -o deploy
 branches:
     - master
 name: Publish Website
