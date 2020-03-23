@@ -1,4 +1,4 @@
-on: push
+on: deploy
 branches:
     - master
 name: Publish Website
@@ -17,4 +17,4 @@ jobs:
         ftp-username: slowyiom
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
-        git-ftp-args: --remote-root pawsonplastic.net
+        git-ftp-args: --dry-run --remote-root pawsonplastic.net
