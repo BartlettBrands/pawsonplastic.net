@@ -1,8 +1,6 @@
-on: push
+on: "push -o deploy"
 branches:
     - master
-push_option:
-    - deploy
 name: Publish Website
 jobs:
   FTP-Deploy-Action:
