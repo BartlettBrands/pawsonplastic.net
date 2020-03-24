@@ -1,7 +1,7 @@
 :root {
     --c-blue:           #052096ff;
     --c-orange:         #ED5E37ff;
-    --c-orange-faded:   #ED5E3780;
+    --c-orange-rust:    #7E321Eff;
     --c-neon:           #DCFF48ff;
     --c-neon-faded:     #DCFF4880;
 
@@ -17,7 +17,7 @@
     --max-width:        1200px;
 
     --base:             25px;
-    /* base / max font-size */
+    /* base ÷ max font-size */
     --calc-base:        calc(25 / 32);
     /* calculations adding in 'rem' */
     --calc-b-half:      calc(0.5rem * var(--calc-base));
@@ -33,6 +33,9 @@
     --calc-b8:          calc(8rem * var(--calc-base));
     --calc-b9:          calc(9rem * var(--calc-base));
     --calc-b10:         calc(10rem * var(--calc-base));
+
+    --btn-left:         var(--calc-b-half);
+    --btn-bottom:       var(--btn-left);
 }
 
 /*  The box widths max out at 1200px, which for font sizes is 28px.
@@ -98,6 +101,8 @@
 @media (max-width: 768px) {
     :root {
         --f-size: 25px;
+        --btn-left: 0.3rem;
+        --btn-bottom: 0.45rem;
     }
 }
 /* ---- an inbetween size */
@@ -116,6 +121,7 @@
 @media (max-width: 480px) {
     :root {
         --f-size: 22px;
+        --btn-left: 0.15rem;
     }
 }
 /* a standard size */
@@ -160,6 +166,14 @@ img {
     height: auto;
     display: block;
 }
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--calc-b7);
+    width: 90%;
+    max-width: 100%;
+}
 ul, ol, li {
     list-style: none;
     margin: 0;
@@ -187,6 +201,10 @@ figure {
 
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
+    .button {
+        width: auto;
+        height: var(--calc-b6);
+    }
     footer,
     section {
         padding: 0 var(--calc-b1);
@@ -211,7 +229,7 @@ a:hover,
 a:active,
 a:focus {
     color: var(--c-orange);
-    border-bottom-color: var(--c-orange-faded);
+    border-bottom-color: var(--c-orange-rust);
 }
 
 big {
@@ -256,7 +274,7 @@ body > footer {
     letter-spacing: 0.04em;
 }
 
-h1, h2, h3, h4, h5, h6, aside {
+h1, h2, h3, h4, .h4-style, h5, h6, .button, aside {
     font-family: var(--f-wide);
     font-weight: bold;
     line-height: var(--lh2);
@@ -270,6 +288,7 @@ h1 {
 h2 {
     /* font-size: 34px; */
     font-size: 1.0625rem;
+    line-height: var(--lh1);
 }
 h2 big {
     font-size: 1.1em;
@@ -279,8 +298,10 @@ h2 big {
 h3 {
     /* font-size: 74px; */
     font-size: 2.3125rem;
+    margin-top: var(--calc-b1-half);
+    margin-bottom: var(--calc-b5);
 }
-h4 {
+h4, .h4-style {
     /* font-size: 28px; */
     font-size: 0.875rem;
     /* margin-top: 50px; */
@@ -296,6 +317,12 @@ h6 {
     /* font-size: 24px; */
     font-size: 0.75rem;
 }
+.button {
+    /* font-size: 42px; */
+    font-size: 1.3125rem;
+    font-weight: 900;
+    margin: var(--calc-b1-half) auto;
+}
 aside {
     /* font-size: 18px; */
     font-size: 0.5625rem;
@@ -303,8 +330,9 @@ aside {
 }
 
 @media (max-width: 960px) {
-    /* numbers are based on the mobile design which is the phone size
-       and the root font-size is 20px */
+    /* numbers are based on the mobile design which is designed with phone size in mind,
+       and the root font-size AT THAT width is 20px.
+       In other words, build the REM sizes up from that size in mind */
 
     p {
         margin-top: var(--calc-b1);
@@ -323,8 +351,10 @@ aside {
     h3 {
         /* based on 44px */
         font-size: 2.2rem;
+        margin-top: var(--calc-b1);
+        margin-bottom: var(--calc-b4);
     }
-    h4 {
+    h4, .h4-style {
         /* based on 20px */
         font-size: 1rem;
     }
@@ -335,6 +365,10 @@ aside {
     aside {
         /* based on 14px */
         font-size: 0.7rem;
+    }
+    .button {
+        /* based on 28px */
+        font-size: 1.4rem;
     }
     body > footer {
         /* based on 15px */
@@ -347,6 +381,36 @@ aside {
         font-size: 2rem;
     }
 }
+
+
+
+/* BUTTONS ----------------------------------------*/
+
+.button {
+    color: var(--c-neon);
+    background-color: var(--c-orange);
+    border: var(--border);
+    border-radius: 30px;
+    padding: 0 2rem;
+    box-shadow:
+        calc(-1 * var(--btn-left)) 0 0 0 var(--c-orange-rust),
+        0 var(--btn-bottom) 0 0 var(--c-orange-rust),
+        calc(-1 * var(--btn-left)) var(--btn-bottom) 0 0 var(--c-orange-rust);
+    cursor: url(../img/cursor-paw.png), pointer;
+}
+.button:hover,
+.button:focus,
+.button:active {
+    color: var(--c-neon);
+    border: var(--border);
+}
+.button:active {
+    box-shadow: none;
+    position: relative;
+    left: calc(-1 * var(--btn-left));
+    top: var(--btn-bottom);
+}
+
 
 
 /* COMMON ----------------------------------------*/

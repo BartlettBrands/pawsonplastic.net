@@ -73,8 +73,8 @@
         max-width: 13.65rem;
     }
     .img-POP-icon {
-        /* max-width: 216px; */
-        max-width: 10.8rem;
+        /* max-width: 132px; */
+        max-width: 6.6rem;
     }
     .img-arrow {
         /* max-width: 85px; */
@@ -130,6 +130,7 @@
         max-width: 100%;
     }
 }
+
 
 
 /* MARQUEE ----------------------------------------*/
@@ -278,6 +279,7 @@
     .hero__grid {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
+        margin-bottom: var(--calc-b3);
     }
     .hero__title {
         margin-top: var(--calc-b2);
@@ -309,7 +311,8 @@
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
     .arrow {
-        margin-top: 0;
+        margin-top: var(--calc-b1-half);
+        margin-bottom: var(--calc-b2-half);
         margin-left: 0;
         padding: var(--calc-b-half) 0 var(--calc-b1);
     }
@@ -359,7 +362,7 @@
         margin-top: calc(var(--calc-b-half) * -1);
     }
     .tim__grid {
-        margin-top: var(--calc-b2);
+        margin-top: var(--calc-b2-half);
         justify-items: center;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -521,7 +524,8 @@
 @media (max-width: 960px) {
     /* 20px root font-size for smallest size */
     .quips-section {
-        margin-top: var(--calc-b4);
+        margin-top: var(--calc-b5);
+        margin-bottom: var(--calc-b5);
         padding-bottom: var(--calc-b-half);
     }
     .quips__grid {
@@ -540,6 +544,10 @@
 
 
 /* BAGS & ANIMAL HEADS ----------------------------------------*/
+
+.landfill-section {
+    margin-bottom: var(--calc-b6);
+}
 
 .bags__grid {
     padding: var(--calc-b1) 0;
@@ -588,111 +596,23 @@
     }
 }
 
+@media (max-width: 960px) {
+    .landfill-section {
+        margin-bottom: var(--calc-b4);
+    }
+}
 
 
-/* SHAME ----------------------------------------*/
 
-.shame {
-    padding-top: var(--calc-b1);
-}
-.shame__grid {
-    align-items: stretch;
-    margin-bottom: var(--calc-b1);
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "title-dl      title-copy"
-        "insta-graphic insta-text";
-}
-.shame__title-dl {
-    grid-area: title-dl;
-}
-.shame__title-copy {
-    grid-area: title-copy;
-}
-.shame__insta-graphic,
-.shame__insta-wrapper {
-    display: flex;
-    margin: calc(var(--calc-b1) * -1) 0 0;
-    position: relative;
-}
-.shame__insta-graphic {
-    grid-area: insta-graphic;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.shame__insta-wrapper {
-    grid-area: insta-text;
-    padding: var(--calc-b1);
-    background: var(--c-neon);
-    color: var(--c-orange);
-}
-.shame__insta-text {
-    display: flex;
-    align-self: center;
-    font-size: 0.95em;
-    line-height: var(--lh1);
-    margin: 0;
+/* ACTIONS SECTION ----------------------------------------*/
+
+.actions-section {
+    margin-bottom: var(--calc-b9);
 }
 
 @media (max-width: 960px) {
-    /* 20px root font-size for smallest size */
-    .shame__grid {
-        max-width: calc(var(--max-width) * 0.67);
-        margin-bottom: var(--calc-b3);
-        grid-template-columns: auto;
-        grid-template-rows: auto 1fr auto 1fr;
-        grid-template-areas:
-            "title-dl"
-            "insta-graphic"
-            "title-copy"
-            "insta-text";
-    }
-    .shame__insta-text {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .shame__insta-text {
-        font-size: 5vw;
-    }
-}
-
-
-/* DONATE ----------------------------------------*/
-
-.donate {
-    position: relative;
-    margin: 0 auto var(--calc-b3);
-    padding: var(--calc-b2) 0;
-}
-.donate__burst1,
-.donate__burst2 {
-    position: absolute;
-}
-.donate__burst1 {
-    top: 10%;
-    left: 0;
-}
-.donate__burst2 {
-    right: 0;
-    bottom: 5%;
-}
-
-@media (max-width: 960px) {
-    /* 20px root font-size for smallest size */
-    .donate {
-        padding: var(--calc-b6) 0;
-    }
-    .donate__burst1 {
-        top: 0;
-        left: calc(var(--calc-b2-half) * -1);
-    }
-    .donate__burst2 {
-        bottom: 0;
-        right: calc(var(--calc-b3) * -1);
+    .actions-section {
+        margin-bottom: var(--calc-b6);
     }
 }
 
@@ -711,7 +631,6 @@
         "calphalon icon gratitude";
     align-items: flex-end;
     justify-content: stretch;
-    margin-top: var(--calc-b5);
 }
 .footer__calphalon {
     grid-area: calphalon;
